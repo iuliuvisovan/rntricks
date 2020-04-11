@@ -142,3 +142,55 @@ code {
     margin-top: 2px;
   }
 }
+
+.latest-article {
+  border: 1px solid #30394722;
+  display: flex;
+  position: relative;
+  margin-top: 5px;
+  padding: 8px;
+}
+
+.latest-article .img-wrapper {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-right: 8px;
+}
+
+.latest-article img {
+  height: 200px;
+}
+
+.latest-article .text-wrapper {
+  padding: 0 8px;
+  position: relative;
+}
+
+.latest-article h2 {
+  margin: 0px;
+}
+.latest-article p {
+  margin: 0px;
+  margin-top: 8px;
+  height: 100px;
+  line-height: 28px;
+}
+
+.go-to-article {
+  position: absolute;
+  bottom: 4px;
+  right: 8px;
+}
+
+.latest-article-date {
+  /* position: absolute;
+  bottom: 8px;
+  left: 8px; */
+  color: #0000008a;
+}
+
+.latest-article-wrapper {
+  margin-top: 50px;
+}
