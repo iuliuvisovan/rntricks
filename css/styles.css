@@ -32,7 +32,8 @@ code {
 }
 
 .article {
-  max-width: calc(100vw - 30px);
+  width: 618px;
+  max-width: calc(100vw - 60px);
 }
 
 .article-header {
