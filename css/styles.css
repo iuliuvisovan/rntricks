@@ -120,7 +120,7 @@ code {
   font-family: 'Courier New', Courier, monospace;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 500px) {
   .article-title {
     font-size: 22px;
   }
