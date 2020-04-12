@@ -56,10 +56,10 @@
 
             <!-- search & aside toggle -->
             <div class="nav-btns">
-              <button class="aside-btn"><i class="fa fa-bars"></i></button>
+              <!-- <button class="aside-btn"><i class="fa fa-bars"></i></button> -->
               <button class="search-btn"><i class="fa fa-search"></i></button>
               <div class="search-form">
-                <input class="search-input" type="text" name="search" placeholder="Enter Your Search ..." />
+                <input class="search-input" type="text" name="search" placeholder="Find article..." />
                 <button class="search-close"><i class="fa fa-times"></i></button>
               </div>
             </div>
@@ -191,7 +191,7 @@
                   <span class="post-date"><%= moment(article.date, 'DD/MM/YYYY').format('MMMM DD, YYYY') %></span>
                 </div>
                 <h3 class="post-title">
-                  <a href="/article/<%= article.url %>">
+                  <a href="/article/<%= article.url %>" style="line-height: 23px">
                     <%= article.title %>
                   </a>
                 </h3>

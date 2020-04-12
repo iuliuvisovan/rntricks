@@ -56,24 +56,23 @@ code {
 }
 
 .article-subtitle {
-  color: #0000008a;
+  color: #0000004a;
   font-family: 'Roboto', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
-  margin-bottom: 17px;
+  margin-bottom: 30px;
 }
 
 .article-cover {
-  margin-top: 36px;
+  margin-top: 10px;
   width: 100%;
 }
 
 .article-date {
   color: #00000066;
   font-family: 'Roboto', sans-serif;
-  margin-top: 32px;
-  display: flex;
-  align-items: center;
+  text-transform: uppercase;
+  font-size: 12px;
 }
 
 .article-date span {
@@ -207,9 +206,23 @@ pre {
   padding-right: 30px;
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   pre {
     font-size: 14px;
     max-width: 100vw;
   }
+}
+
+.article-type {
+  font-size: 13px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  font-weight: 600;
+  border-radius: 2px;
+  margin-right: 15px;
+  color: #fff;
+  background-color: #212631;
+  -webkit-transition: 0.2s opacity;
+  transition: 0.2s opacity;
+  text-decoration: none;
 }

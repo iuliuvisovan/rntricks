@@ -43,14 +43,12 @@
         <%= article.subtitle %>
       </h4>
 
-      <span class="article-date">
-        <div class="line"></div>
-        <span>
-          APR 10, 2020
+      <div>
+        <a class="article-type" style="background-color: <%= article.color %>;" href="category.html"><%= article.type %> </a>
+        <span class="article-date">
+          <%= moment(article.date, 'DD/MM/YYYY').format('MMMM DD, YYYY') %>
         </span>
-        <div class="line"></div>
-      </span>
-
+      </div>
       <img class="article-cover" src="/article/<%= article.url %>/img/cover.jpg" alt="Laptop with React Native code" />
 
       <div class="article-body">
@@ -63,12 +61,7 @@
     Found this article useful?
     <br />
     <br />
-    <div
-      class="fb-share-button"
-      data-href="https://www.rntricks.com/article/<%= article.url %>"
-      data-layout="box_count"
-      data-size="large"
-    >
+    <div class="fb-share-button" data-href="https://www.rntricks.com/article/<%= article.url %>" data-layout="box_count" data-size="large">
       <a
         target="_blank"
         href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.rntricks.com%2Farticle%2F<%= article.url %>%2F&amp;src=sdkpreparse"

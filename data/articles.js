@@ -383,7 +383,7 @@ module.exports = [
     date: '12/04/2020',
     type: 'Tutorial',
     title: 'How to Translate Your React Native App',
-    subtitle: "It's not a matter of if, but when. Let's cover the how.",
+    subtitle: "It's not a matter of if, but when. Let's see how.",
     body: [
       {
         type: 'h2',
