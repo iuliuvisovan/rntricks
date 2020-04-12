@@ -278,11 +278,15 @@ textarea.input {
 .nav-menu li a {
   position: relative;
   padding: 25px 20px;
-  text-transform: capitalize;
   -webkit-box-shadow: -1px 0px 0px 0px #eceef2 inset;
   box-shadow: -1px 0px 0px 0px #eceef2 inset;
   -webkit-transition: 0.2s color;
   transition: 0.2s color;
+  text-transform: uppercase;
+  position: relative;
+  padding: 25px 20px;
+  font-family: 'Roboto';
+  font-weight: 500;
 }
 .nav-menu li:first-child a {
   border-left: 1px solid #eceef2;
