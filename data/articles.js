@@ -271,7 +271,8 @@ module.exports = [
   },
   {
     id: '2',
-    date: '12/04/2020',
+    date: '11/04/2020',
+    type: 'Tips & Tricks',
     title: 'How to Navigate To Parent Route From Nested Navigator in React Navigation',
     subtitle: 'When everything else fails, this trick gets you out of trouble.',
     body: [
@@ -376,5 +377,13 @@ module.exports = [
         innerText: `https://github.com/react-navigation/react-navigation/issues/335`,
       },
     ],
+  },
+  {
+    id: '3',
+    date: '12/04/2020',
+    type: 'Tutorial',
+    title: 'How to Translate Your React Native App',
+    subtitle: "It's not a matter of if, but when. This tutorial covers the how.",
+    body: [],
   },
 ];
