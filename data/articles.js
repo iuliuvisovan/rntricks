@@ -434,7 +434,7 @@ module.exports = [
       },
       {
         type: 'p',
-        innerText: `Put this in your rootmost component:`,
+        innerText: `Put this in your root component:`,
       },
       {
         type: 'pre',
@@ -488,7 +488,7 @@ module.exports = [
       },
       {
         type: 'p',
-        innerText: `Add this in your rootmost component:`,
+        innerText: `Add this in your root component:`,
       },
       {
         type: 'pre',
