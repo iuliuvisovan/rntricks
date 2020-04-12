@@ -480,7 +480,7 @@ module.exports = [
       },
       {
         type: 'h2',
-        innerText: `3. Make the <code>t</code> function available globally`,
+        innerText: `4. Make the <code>t</code> function available globally`,
       },
       {
         type: 'p',
@@ -519,7 +519,7 @@ module.exports = [
       },
       {
         type: 'h2',
-        innerText: `4. Add strong typing to your <code>T</code> calls`,
+        innerText: `5. Add strong typing to your <code>T</code> calls`,
       },
       {
         type: 'p',
@@ -553,7 +553,7 @@ module.exports = [
       },
       {
         type: 'h2',
-        innerText: `5. NOT adding every single key by hand to our dictionary`,
+        innerText: `6. NOT adding every single key by hand to our dictionary`,
       },
       {
         type: 'p',
@@ -636,7 +636,7 @@ module.exports = [
       },
       {
         type: 'h2',
-        innerText: `6. Changing the language`,
+        innerText: `7. Changing the language`,
       },
       {
         type: 'p',
@@ -662,7 +662,7 @@ module.exports = [
       },
       {
         type: 'h2',
-        innerText: `6. And we're done!`,
+        innerText: `8. And we're done!`,
       },
       {
         type: 'p',
