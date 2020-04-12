@@ -272,8 +272,8 @@ module.exports = [
   {
     id: '2',
     date: '12/04/2020',
-    title: 'How To Navigate To a Parent Screen From a Nested Navigator in React Navigation',
-    subtitle: 'When everything else fails, this will trick always get you out of trouble.',
+    title: 'How to Navigate To Parent Route From Nested Navigator in React Navigation',
+    subtitle: 'When everything else fails, this trick gets you out of trouble.',
     body: [
       {
         type: 'h2',
@@ -322,13 +322,12 @@ module.exports = [
       {
         type: 'pre',
         innerText: `
-        render() {
-          return (
-            &lt;StackNavigator 
-            <b>ref={(x) => (global.stackNavigator = x)} </b>
-            /&gt;
-            )
-          }`,
+  render() {
+    return (
+      &lt;StackNavigator 
+        <b>ref={(x) => (global.stackNavigator = x)} </b>
+      /&gt;)
+    }`,
       },
       {
         type: 'p',
@@ -337,12 +336,12 @@ module.exports = [
       {
         type: 'pre',
         innerText: `
-        <b>global.stackNavigator</b>.dispatch(
-          NavigationActions.navigate({
-            routeName: 'Home',
-            params: { },
-          }),
-          );`,
+  <b>global.stackNavigator</b>.dispatch(
+    NavigationActions.navigate({
+      routeName: 'Home',
+      params: { },
+    }),
+    );`,
       },
       {
         type: 'h2',

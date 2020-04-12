@@ -7,16 +7,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Iuliu Visovan" />
-    <meta name="description" content="React Native is a powerful and complex tool, but building apps with it doesn't have to be cumbersome." />
-    <meta name="author" content="Iuliu Vișovan" />
+    <meta name="author" content="rntricks.com" />
+    <meta name="description" content="<%= article.subtitle %>" />
+    <meta name="author" content="rntricks.com" />
     <meta name="theme-color" content="#303947" />
-    <meta property="og:url" content="https://rntricks.com/article/how-to-maximize-your-coding-efficiency-when-writing-react-native" />
+    <meta property="og:url" content="https://rntricks.com/article/<%= article.url %>" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="<%= article.title %>" />
-    <meta property="og:description" content="React Native is a powerful and complex tool, but building apps with it doesn't have to be cumbersome." />
-    <meta name="keywords" content="React Native, coding, efficiency" />
-    <meta property="og:image" content="https://rntricks.com/article/how-to-maximize-your-coding-efficiency-when-writing-react-native/img/cover.png" />
+    <meta property="og:description" content="/article/<%= article.subtitle %>/img/cover.jpg" />
+    <meta property="og:image" content="https://rntricks.com/article/<%= article.url %>/img/cover.jpg" />
     <link rel="stylesheet" href="../../css/styles.css?v=3" />
     <link id="favicon" rel="icon" href="../img/favicon.png" type="image/png" sizes="16x16" />
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto:wght@400&display=swap" rel="stylesheet" />
@@ -66,13 +65,13 @@
     <br />
     <div
       class="fb-share-button"
-      data-href="https://www.rntricks.com/article/how-to-maximize-your-coding-efficiency-when-writing-react-native"
+      data-href="https://www.rntricks.com/article/<%= article.url %>"
       data-layout="box_count"
       data-size="large"
     >
       <a
         target="_blank"
-        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.iuliu.net%2Fcorona%2F&amp;src=sdkpreparse"
+        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.rntricks.com%2Farticle%2F<%= article.url %>%2F&amp;src=sdkpreparse"
         class="fb-xfbml-parse-ignore"
         >Share</a
       >
