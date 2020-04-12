@@ -383,7 +383,7 @@ module.exports = [
     date: '12/04/2020',
     type: 'Tutorial',
     title: 'How to Translate Your React Native App',
-    subtitle: "It's not a matter of if, but when. Let's see how.",
+    subtitle: "It's not a matter of \"if\", but \"when\". Let's see how.",
     body: [
       {
         type: 'h2',
@@ -623,7 +623,7 @@ module.exports = [
       },
       {
         type: 'p',
-        innerText: `And whenever you feel like it, export it to a JSON using the "...More" context menu in the top right. Th JSON will look like this:`,
+        innerText: `And whenever you feel like it, export it to a JSON using the "...More" context menu in the top right. The JSON will look like this:`,
       },
       {
         type: 'pre',
