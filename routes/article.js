@@ -28,8 +28,6 @@ const getArticleByUrl = (url) => {
 
   const incomingArticleUrl = url.substring(url.indexOf('article/') + 8, nextIndex);
 
-  console.log(' * * *incomingArticleUrl', incomingArticleUrl);
-
   const currentArticle = articles.find(({ title }) => titleToUrl(title) == incomingArticleUrl);
 
   currentArticle.url = titleToUrl(currentArticle.title);

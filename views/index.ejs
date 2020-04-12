@@ -145,20 +145,24 @@
         <!-- row -->
         <div class="row">
           <!-- post -->
+          <% articles.map((article) => { %>
           <div class="col-md-6">
             <div class="post post-thumb">
-              <a class="post-img" href="/article/7-tips-for-maximizing-efficiency-when-writing-react-native-apps"
-                ><img src="/article/7-tips-for-maximizing-efficiency-when-writing-react-native-apps/img/cover.jpg" alt=""
-              /></a>
+              <a class="post-img" href="<%= article.url %>"><img src="/article/<%= article.url %>/img/cover.jpg" alt="cover photo" /></a>
               <div class="post-body">
                 <div class="post-meta">
                   <a class="post-category cat-2" href="category.html">Tips & Tricks</a>
-                  <span class="post-date">April 12, 2020</span>
+                  <span class="post-date"><%= moment(article.date, 'DD/MM/YYYY').format('MMMM DD, YYYY') %></span>
                 </div>
-                <h3 class="post-title"><a href="/article/7-tips-for-maximizing-efficiency-when-writing-react-native-apps">7 Tips For Maximizing Efficiency When Writing React Native Apps</a></h3>
+                <h3 class="post-title">
+                  <a href="/article/<%= article.url %>">
+                    <%= article.title %>
+                  </a>
+                </h3>
               </div>
             </div>
           </div>
+          <% }) %>
           <!-- /post -->
 
           <!-- post -->

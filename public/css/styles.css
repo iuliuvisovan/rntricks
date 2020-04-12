@@ -118,7 +118,6 @@ img {
 code {
   background-color: #eeeeee;
   padding: 2px 4px 0 4px;
-  color: #0000008a;
   font-weight: 100;
   font-family: 'Courier New', Courier, monospace;
 }
@@ -194,4 +193,12 @@ code {
 
 .latest-article-wrapper {
   margin-top: 50px;
+}
+
+pre {
+  margin-top: 0px;
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #eeeeee;
+  padding-right: 30px;
 }
