@@ -16,8 +16,8 @@ h4 {
   font-family: 'Roboto', sans-serif;
 }
 
-a,
-code {
+.article-body a,
+.article-body code {
   word-break: break-all;
 }
 
