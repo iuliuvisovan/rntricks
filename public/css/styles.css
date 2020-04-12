@@ -1,3 +1,7 @@
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Merriweather', serif;
   display: flex;
@@ -60,7 +64,7 @@ code {
 }
 
 .article-cover {
-  margin-top: 42px;
+  margin-top: 36px;
   width: 100%;
 }
 
