@@ -16,12 +16,12 @@
     <meta property="og:title" content="<%= article.title %>" />
     <meta property="og:description" content="/article/<%= article.subtitle %>/img/cover.jpg" />
     <meta property="og:image" content="https://rntricks.com/article/<%= article.url %>/img/cover.jpg" />
-    <link rel="stylesheet" href="../../css/styles.css?v=3" />
-    <link id="favicon" rel="icon" href="../img/favicon.png" type="image/png" sizes="16x16" />
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto:wght@400&display=swap" rel="stylesheet" />
+    <%- include partials/resources.ejs %>
   </head>
 
   <body>
+    <%- include('partials/header', { selectedPage: article.type }) %>
+
     <div id="fb-root"></div>
     <script
       async
@@ -31,9 +31,6 @@
     ></script>
     <div class="article">
       <div class="article-header">
-        <a href="https://www.rntricks.com/">
-          <img class="main-logo" src="../img/logo.png" alt="Site logo" title="RNTricks.com" />
-        </a>
         <h1 class="article-title">
           <%= article.title %>
         </h1>

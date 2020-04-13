@@ -35,7 +35,7 @@ body {
   font-weight: 300;
   color: #3d455c;
   margin: 0;
-  padding: 0;
+  padding: 15px !important;
   overflow-x: hidden;
 }
 h1,
@@ -160,7 +160,7 @@ textarea.input {
   border-top: 1px solid #eceef2;
 }
 .section .section-title {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 .section .section-title h2 {
   text-transform: capitalize;
@@ -1021,7 +1021,7 @@ input {
   font-weight: 100 !important;
   text-transform: uppercase;
   margin-top: -3px;
-  padding-top: 9px!important;
+  padding-top: 9px !important;
 }
 
 .post-img img {

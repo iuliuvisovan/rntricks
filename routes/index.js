@@ -5,6 +5,8 @@ const moment = require('moment');
 const { addTitleAndColorTo } = require('./util');
 
 router.get('/', (req, res, next) => {
+  console.log('articles', articles);
+
   articles.forEach((x) => {
     addTitleAndColorTo(x);
   });

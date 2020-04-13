@@ -20,6 +20,14 @@ h4 {
   font-family: 'Roboto', sans-serif;
 }
 
+h1 {
+  font-weight: 600;
+}
+
+h2 {
+  font-weight: 500;
+}
+
 .article-body a,
 .article-body code {
   word-break: break-all;
@@ -37,6 +45,7 @@ code {
 
 .article {
   width: 618px;
+  margin-top: 15px;
   max-width: calc(100vw - 60px);
 }
 
@@ -56,11 +65,12 @@ code {
 }
 
 .article-subtitle {
-  color: #0000004a;
+  color: #0000006a;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 30px;
+  margin-top: 25px;
 }
 
 .article-cover {
@@ -105,7 +115,7 @@ p.indented::first-letter {
 }
 
 h2 {
-  margin-bottom: -10px;
+  margin-bottom: 10px;
   margin-top: 35px;
 }
 
@@ -123,6 +133,7 @@ code {
   padding: 2px 4px 0 4px;
   font-weight: 100;
   font-family: 'Courier New', Courier, monospace;
+  color: inherit;
 }
 
 @media (max-width: 500px) {
@@ -225,4 +236,15 @@ pre {
   -webkit-transition: 0.2s opacity;
   transition: 0.2s opacity;
   text-decoration: none;
+}
+
+.nav-menu li a {
+  font-weight: 400;
+}
+
+.nav-menu a.selected {
+  background-color: #b0d0d338;
+}
+.nav-menu li a:hover {
+  background-color: #b0d0d338;
 }
