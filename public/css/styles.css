@@ -248,3 +248,8 @@ pre {
 .nav-menu li a:hover {
   background-color: #b0d0d338;
 }
+
+.article-body a {
+  color: #0078ff;
+  word-break: unset!important;
+}

@@ -11,16 +11,11 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `Any translation library that works for React will also do the trick for React Native. There's a about 5 or 6 main options that you could choose from:`,
-    },
-    {
-      type: 'a',
-      url: `https://phrase.com/blog/posts/react-i18n-best-libraries/`,
-      innerText: `https://phrase.com/blog/posts/react-i18n-best-libraries/`,
+      innerText: `It <i>is</i> true that any translation library that works for React will also do the trick for React Native. There's <a href="https://phrase.com/blog/posts/react-i18n-best-libraries/">about 5 or 6 main options that you could choose from</a>.`,
     },
     {
       type: 'p',
-      innerText: `But after counting up the pros and cons of each one, we decided to go with <a href="https://www.i18next.com/">i18next</a>. It's a library that offers a quick-enough "getting started" routine, as well as a ton of other plug-n-play features which you can opt in for later.`,
+      innerText: `But after counting up the pros and cons of each one, we decided to go with <a href="https://www.i18next.com/">i18next</a>. It's a library that offers a quick "getting started" routine, as well as quite a few  plug-n-play features which you can opt in for later.`,
     },
     {
       type: 'p',
