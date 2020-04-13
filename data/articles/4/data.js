@@ -45,7 +45,7 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `An even more useful trick when using Fast Refresh is the ability to check the value of any variable from the current frame. Consider this example:`,
+      innerText: `An even more useful trick when using <b>Fast Refresh</b> is the ability to check the value of any variable from the current frame. Consider this example:`,
     },
     {
       type: 'img',
@@ -81,8 +81,7 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `But instead of firing up the remote debugger, un-tabbing the Chrome window (or RN will whine about background tabs),
-        opening dev tools, navigating to current file, setting a breakpoint and reloading the app, and only THEN being able to see our data, we can do this much, much easier with Fast Refresh.`,
+      innerText: `But instead of firing up the remote debugger and going through all the hassle associated with it, we can do this much, much easier with <b>Fast Refresh</b>.`,
     },
     {
       type: 'p',
@@ -105,7 +104,7 @@ module.exports = {
     {
       type: 'p',
       innerText: `Assigning <code>console.log(stat)</code> to a completely arbitrary and non-existent attribute (in this case “dog” — a random string that I’ve found
-          handy) and then saving to trigger Fast Refresh, our render function will fire, triggering an evaluation of our <code>dog</code> attribute.`,
+          handy) and then saving to trigger Fast Refresh, our render function will trigger an evaluation of our <code>dog</code> attribute.`,
     },
     {
       type: 'img',
