@@ -138,7 +138,7 @@ module.exports = [
       },
       {
         type: 'img',
-        url: 'img/twowindows.jpg',
+        url: 'twowindows.jpg',
         alt: 'Two code editor windows',
       },
       {
@@ -177,12 +177,12 @@ module.exports = [
       },
       {
         type: 'img',
-        url: 'img/live-reload-ui.gif',
+        url: 'live-reload-ui.gif',
         alt: 'Live Reload demo gif',
       },
       {
         type: 'p',
-        innerText: `Combining the power of hot reloading with a quick snippet, you can get exactly what you need in no time. All without leaving your IDE.`,
+        innerText: `Combining the power of Fast Refresh with a quick snippet, you can get exactly what you need in no time. All without leaving your IDE.`,
       },
       {
         type: 'p',
@@ -200,11 +200,11 @@ module.exports = [
       },
       {
         type: 'p',
-        innerText: `An even more useful trick when using hot reloading is the ability to check the values of any variables from the current frame. Consider this example:`,
+        innerText: `An even more useful trick when using Fast Refresh is the ability to check the values of any variables from the current frame. Consider this example:`,
       },
       {
         type: 'img',
-        url: `img/stats.jpg`,
+        url: `stats.jpg`,
         alt: `iOS Simulator top part`,
       },
       {
@@ -218,17 +218,17 @@ module.exports = [
       },
       {
         type: 'img',
-        url: `img/statscode.jpg`,
+        url: `statscode.jpg`,
         alt: `Code about player statts`,
       },
       {
         type: 'p',
-        innerText: `In the screenshot, the stat seems to aways be “-”. This indicates that the stat variable’s structure has changed, so we need to inspect it.`,
+        innerText: `In the screenshot, the <code>stat</code>'s value seems to aways be “-”. This indicates that the stat variable’s structure is not quite right, so we need to inspect it.`,
       },
       {
         type: 'p',
         innerText: `One way to inspect data in React Native is firing up the remote debugger, un-tab the Chrome window (otherwise RN will whine about background tabs),
-        open dev tools, open this current file, set a breakpoint right before the <code>return</code> of the <code>render</code> function, reload the app,
+        open dev tools, open the current file, set a breakpoint right before the <code>return</code> of the <code>render</code> function, reload the app,
         navigate in your app to this exact screen and scenario, pray for no source map bugs, and then inspect your received data.`,
       },
       {
@@ -241,7 +241,7 @@ module.exports = [
       },
       {
         type: 'img',
-        url: `img/statscode2.jpg`,
+        url: `statscode2.jpg`,
         alt: `Code about player stats`,
       },
       {
@@ -257,6 +257,11 @@ module.exports = [
         type: 'p',
         innerText: `Assigning <code>console.log(stat)</code> to a completely arbitrary and non-existent attribute (in this case “dog” — a random string that I’ve found
           handy) and then saving to trigger Fast Refresh, our render function will fire, triggering an evaluation of our <code>dog</code> attribute.`,
+      },
+      {
+        type: 'img',
+        url: `console.jpg`,
+        alt: `Console with code`,
       },
       {
         type: 'p',
@@ -383,7 +388,7 @@ module.exports = [
     date: '12/04/2020',
     type: 'Tutorial',
     title: 'How to Translate Your React Native App',
-    subtitle: "It's not a matter of \"if\", but \"when\". Let's see how.",
+    subtitle: 'It\'s not a matter of "if", but "when". Let\'s see how.',
     body: [
       {
         type: 'h2',
@@ -667,6 +672,124 @@ module.exports = [
       {
         type: 'p',
         innerText: `There are still nice things you could do, such as putting your <code>T</code> inside of a custom <code>Text</code> component that you would use instead of the default one, to get you writing even less <code>T</code>s, but other than that, these steps will get you to a point in which you can get to a fully translation-ready app in as little as a day. And then it's just a matter of sending the files to the translators!`,
+      },
+    ],
+  },
+  {
+    id: '4',
+    date: '12/04/2020',
+    type: 'Tips & Tricks',
+    title: 'Use This Fast Refresh Trick To Quickly Debug Your React Native App',
+    subtitle: 'Use this trick to inspect values and quickly solve bugs in your code',
+    body: [
+      {
+        type: 'p',
+        innerText: `React Native’s Fast Refresh feature is one of the hottest (pun intended) implementations out there when it comes to previewing code changes.`,
+      },
+      {
+        type: 'p',
+        innerText: `Due to this, apart from its contribution to a quicker, more efficient development flow, turns out to be a really helpful UI elements & data inspection tool as 
+        well.`,
+      },
+      {
+        type: 'h2',
+        innerText: '1. Use Fast Refresh for Fixing Your UI',
+      },
+      {
+        type: 'p',
+        innerText: `Make a <code>bred</code> snippet that creates a red <code>border</code>, use it inside any element, hit <code>CMD+S</code> and see your
+        element pop on screen. You can then adjust or enhance your element’s styling to your liking. Turns out to be just what you need 95% of the time.`,
+      },
+      {
+        type: 'img',
+        url: 'img/live-reload-ui.gif',
+        alt: 'Live Reload demo gif',
+      },
+      {
+        type: 'p',
+        innerText: `This method will also mean you don’t have to open inspect pop-ups and menus and disrupt your coding workflow. Debug-as-you-go with this simple trick.`,
+      },
+      {
+        type: 'h2',
+        innerText: `2. Use Fast Refresh for Inspecting Data`,
+      },
+      {
+        type: 'p',
+        innerText: `An even more useful trick when using Fast Refresh is the ability to check the value of any variable from the current frame. Consider this example:`,
+      },
+      {
+        type: 'img',
+        url: `stats.jpg`,
+        alt: `iOS Simulator top part`,
+      },
+      {
+        type: 'p',
+        innerText: ` This “Player Stats” screen is supposed to show <code>stats</code> of a player. But it looks like something is broken, and we need to find out what it
+        is.`,
+      },
+      {
+        type: 'p',
+        innerText: `The code looks like this:`,
+      },
+
+      {
+        type: 'pre',
+        innerText: `
+  &lt;View>
+    {stats.map(stat => 
+      &ltStat {...stat} />
+    )}
+  &lt;/View>
+  
+  ...
+
+  export const Stat = ({ value = '', name }) => ...`,
+      },
+      {
+        type: 'p',
+        innerText: `In the screenshot, the stat's value seems to aways be “-”. This indicates that the stat variable’s structure has changed. We need to inspect it.`,
+      },
+      {
+        type: 'p',
+        innerText: `But instead of firing up the remote debugger, un-tabbing the Chrome window (or RN will whine about background tabs),
+        opening dev tools, navigating to current file, setting a breakpoint and reloading the app, and only THEN being able to see our data, we can do this much, much easier with Fast Refresh.`,
+      },
+      {
+        type: 'p',
+        innerText: `Just add this in your markup:`,
+      },
+      {
+        type: 'pre',
+        innerText: `
+  &lt;View>
+  {stats.map(stat => 
+    &lt;Stat <b>dog={console.log(stat)}</b> {...stat} />  
+  )}
+  &lt;/View>`,
+      },
+      {
+        type: 'p',
+        innerText: `Due to the nature of the <code>render</code> function, each and every time it is called, every attribute of every element is evaluated to be then sent
+        down as props.`,
+      },
+      {
+        type: 'p',
+        innerText: `Assigning <code>console.log(stat)</code> to a completely arbitrary and non-existent attribute (in this case “dog” — a random string that I’ve found
+          handy) and then saving to trigger Fast Refresh, our render function will fire, triggering an evaluation of our <code>dog</code> attribute.`,
+      },
+      {
+        type: 'img',
+        url: `console.jpg`,
+        alt: `Console with code`,
+      },
+      {
+        type: 'p',
+        innerText: `And now we can easily see that we actually need to spread <code>stat.content</code> and not <code>stat</code>, as our data got nested under
+        <code>content</code>.`,
+      },
+      {
+        type: 'p',
+        innerText: `Enjoy!`,
       },
     ],
   },
