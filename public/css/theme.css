@@ -1041,10 +1041,10 @@ button {
   outline: none !important;
 }
 
-.nav-btns .search-form .search-close {
-  right: 39px;
+.search-btn {
+  padding-right: 11px !important;
 }
 
-.nav-btns .search-form {
-  padding: 0px 27px;
+.nav-btns .search-form .search-close {
+  right: 25px;
 }
