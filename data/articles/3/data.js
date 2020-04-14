@@ -31,7 +31,7 @@ module.exports = {
     },
     {
       type: 'h2',
-      innerText: `2. Create empty translation file for english`,
+      innerText: `2. Create empty translation file for English`,
     },
     {
       type: 'p',
@@ -77,7 +77,7 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `The initizalization is pretty straightforward, but can take a ton of configuration options based on your needs. <a href="https://www.i18next.com/overview/configuration-options">See all of them here.</a>`,
+      innerText: `The initialization is pretty straightforward, but can take a ton of configuration options based on your needs. <a href="https://www.i18next.com/overview/configuration-options">See all of them here.</a>`,
     },
     {
       type: 'p',
@@ -176,7 +176,7 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `You could do that manually, but depending on the size of your project it might be really time consuming, and will definitely not feel like a coder's job.`,
+      innerText: `You could do that manually, but depending on the size of your project it might be really time-consuming, and will definitely not feel like a coder's job.`,
     },
     {
       type: 'p',
