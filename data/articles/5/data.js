@@ -59,7 +59,7 @@ module.exports = {
     },
     {
       type: 'h2',
-      innerText: `4. Real-time Code Previews`,
+      innerText: `4. Real Time Code Previews`,
     },
     {
       type: 'p',
@@ -68,7 +68,7 @@ module.exports = {
 
     {
       type: 'h2',
-      innerText: `5. Everything is Plug-n-Play`,
+      innerText: `5. Everything Is Plug-n-Play`,
     },
     {
       type: 'p',
