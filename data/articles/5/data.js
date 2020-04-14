@@ -15,7 +15,7 @@ module.exports = {
     },
     {
       type: 'h2',
-      innerText: `1. Two Basic Elements. Nothing more.`,
+      innerText: `1. Two Primitves. Nothing more.`,
     },
     {
       type: 'p',
