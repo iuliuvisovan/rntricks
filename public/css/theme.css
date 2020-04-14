@@ -1027,3 +1027,24 @@ input {
 .post-img img {
   margin: 0 !important;
 }
+
+input {
+  text-transform: initial;
+}
+
+.nav-btns .search-form.active {
+  background: #fff;
+  box-shadow: 0px -1px 0px 0px #eceef2 inset;
+}
+
+button {
+  outline: none !important;
+}
+
+.nav-btns .search-form .search-close {
+  right: 39px;
+}
+
+.nav-btns .search-form {
+  padding: 0px 27px;
+}

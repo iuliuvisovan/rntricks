@@ -4,9 +4,6 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var articlesRouter = require('./routes/article');
-
 var app = express();
 
 // view engine setup
@@ -19,8 +16,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(__dirname + '/public'));
 
-app.use('/', indexRouter);
-app.use('/article', articlesRouter);
+app.use('/', require('./routes/index'));
+app.use('/article', require('./routes/article'));
+app.use('/category',  require('./routes/category'));
 
 // app.get('/article/*/img/test.jpg', (req, res) => {
 //   console.log('req', req.originalUrl);

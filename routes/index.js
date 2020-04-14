@@ -5,8 +5,6 @@ const moment = require('moment');
 const { enhance } = require('./util');
 
 router.get('/', (req, res, next) => {
-  console.log('articles', articles);
-
   articles.forEach((x) => {
     enhance(x);
   });

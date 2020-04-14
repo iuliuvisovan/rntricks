@@ -14,7 +14,7 @@ module.exports = {
     },
     {
       type: 'h2',
-      innerText: `1. Two Primitves. Nothing more.`,
+      innerText: `1. Two Primitives. Nothing more.`,
     },
     {
       type: 'p',
