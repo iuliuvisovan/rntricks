@@ -38,7 +38,9 @@
           <% articles.sort((a,b) => +moment(a.date, 'DD/MM/YYYY') - +moment(b.date, 'DD/MM/YYYY')).slice(0, 2).map((article) => { %>
           <div class="col-md-6">
             <div class="post post-thumb">
-              <a class="post-img" href="/article/<%= article.url %>"><img src="/article/<%= article.url %>/img/cover.jpg" alt="cover photo" /></a>
+              <a class="post-img" href="/article/<%= article.url %>">
+                <img src="<%= article.coverImageUrl %>" alt="Article Cover Photo" />
+              </a>
               <div class="post-body">
                 <div class="post-meta">
                   <a class="post-category cat-2" style="background-color: <%= article.color %>;" href="category.html"><%= article.type %></a>
@@ -68,7 +70,9 @@
           <% articles.sort((a,b) => +moment(b.date, 'DD/MM/YYYY') - +moment(a.date, 'DD/MM/YYYY')).map((article) => { %>
           <div class="col-md-4">
             <div class="post">
-              <a class="post-img" href="/article/<%= article.url %>"><img src="/article/<%= article.url %>/img/cover.jpg" alt="Article Cover" /></a>
+              <a class="post-img" href="/article/<%= article.url %>">
+                <img src="<%= article.coverImageUrl %>" alt="Article Cover Photo" />
+              </a>
               <div class="post-body">
                 <div class="post-meta">
                   <a class="post-category cat-2" style="background-color: <%= article.color %>;" href="category.html"><%= article.type %></a>

@@ -1,5 +1,4 @@
 module.exports = {
-  id: '3',
   date: '12/04/2020',
   type: 'Tutorial',
   title: 'How to Translate Your React Native App',

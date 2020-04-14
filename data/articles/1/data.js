@@ -1,5 +1,4 @@
 module.exports = {
-  id: '1',
   date: '10/04/2020',
   type: 'Tips & Tricks',
   title: '7 Tips For Maximizing Efficiency When Writing React Native Apps',

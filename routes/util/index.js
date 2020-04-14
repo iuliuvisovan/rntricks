@@ -1,8 +1,13 @@
 const articles = require('../../data/articles');
+const fs = require('fs');
+const path = require('path');
 
-const addTitleAndColorTo = (article) => {
+const enhance = (article) => {
   article.url = article.title.replace(/\s/g, '-').toLowerCase();
   article.color = typeColors[article.type];
+  const coverImageUrl = `/article/${article.url}/img/cover.jpg`;
+
+  article.coverImageUrl = fs.existsSync(path.resolve(`./data/articles/${article.id}/img/cover.jpg`)) ? coverImageUrl : '/img/default-cover.jpg';
   return article;
 };
 
@@ -16,7 +21,7 @@ const typeColors = {
 };
 
 module.exports = {
-  addTitleAndColorTo: addTitleAndColorTo,
+  enhance,
   getArticleByUrl: (url) => {
     const nextIndex = url.includes('/img/') ? url.indexOf('/img/') : undefined;
 
@@ -24,7 +29,7 @@ module.exports = {
 
     const currentArticle = articles.find(({ title }) => titleToUrl(title) == incomingArticleUrl);
 
-    addTitleAndColorTo(currentArticle);
+    enhance(currentArticle);
 
     return currentArticle;
   },

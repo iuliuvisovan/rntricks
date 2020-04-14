@@ -46,7 +46,7 @@
           <%= moment(article.date, 'DD/MM/YYYY').format('MMMM DD, YYYY') %>
         </span>
       </div>
-      <img class="article-cover" src="/article/<%= article.url %>/img/cover.jpg" alt="Laptop with React Native code" />
+      <img class="article-cover" src="<%= article.coverImageUrl %>" alt="Article cover photo" />
 
       <div class="article-body">
         <%- article.body.map(block => mapBlockToHtml(block, article.url)).join('') %>

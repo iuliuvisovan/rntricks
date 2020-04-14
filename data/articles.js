@@ -1,7 +1,4 @@
-module.exports = [
-  require('./articles/1/data.js'), 
-  require('./articles/2/data.js'), 
-  require('./articles/3/data.js'), 
-  require('./articles/4/data.js'),
-  require('./articles/5/data.js')
-];
+module.exports = [...new Array(5)].map((x, i) => ({
+  id: i + 1,
+  ...require(`./articles/${i + 1}/data.js`),
+}));
