@@ -70,7 +70,7 @@ module.exports = {
       routeName: 'Home',
       params: { },
     }),
-    );`,
+  );`,
     },
     {
       type: 'h2',
