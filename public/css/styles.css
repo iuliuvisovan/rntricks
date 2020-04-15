@@ -52,6 +52,7 @@ code {
 
 .article-title {
   margin: 0;
+  font-weight: 500;
 }
 
 .article-header img {
@@ -277,4 +278,8 @@ pre {
   .featured-articles-title {
     margin-top: -20px;
   }
+}
+
+.article h2 {
+  text-transform: capitalize;
 }
