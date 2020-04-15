@@ -2,13 +2,8 @@ const express = require('express');
 const router = express.Router();
 const articles = require('../data/articles');
 const moment = require('moment');
-const { enhance } = require('./util');
 
 router.get('/', (req, res, next) => {
-  articles.forEach((x) => {
-    enhance(x);
-  });
-
   res.render('index', { articles, moment });
 });
 

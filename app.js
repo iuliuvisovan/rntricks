@@ -16,9 +16,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(__dirname + '/public'));
 
-app.use('/', require('./routes/index'));
-app.use('/article', require('./routes/article'));
-app.use('/category',  require('./routes/category'));
+app.use('/', require('./routes/index-router'));
+app.use('/article', require('./routes/article-router'));
+app.use('/category', require('./routes/category-router'));
 
 // app.get('/article/*/img/test.jpg', (req, res) => {
 //   console.log('req', req.originalUrl);

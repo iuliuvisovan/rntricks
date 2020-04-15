@@ -1,5 +1,5 @@
 module.exports = {
-  date: '11/04/2020',
+  date: '22/02/2020',
   type: 'Tips & Tricks',
   title: 'How to Navigate To Parent Route From Nested Navigator in React Navigation',
   subtitle: 'When everything else fails, use this trick.',

@@ -1,5 +1,5 @@
 module.exports = {
-  date: '14/04/2020',
+  date: '7/04/2020',
   type: 'Article',
   title: '7 Ways In Which React Native Is Better',
   subtitle: '...than the web.',

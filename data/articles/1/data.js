@@ -1,5 +1,5 @@
 module.exports = {
-  date: '10/04/2020',
+  date: '17/01/2020',
   type: 'Tips & Tricks',
   title: '7 Tips For Maximizing Efficiency When Writing React Native Apps',
   subtitle: "React Native is a complex tool, but building apps with it doesn't have to be cumbersome.",

@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const articles = require('../data/articles');
 const moment = require('moment');
-const { enhance } = require('./util');
 
 const routeMap = {
   '/articles': {
@@ -25,10 +24,6 @@ const routeMap = {
 
 Object.keys(routeMap).forEach((routeKey) => {
   router.get(routeKey, (req, res, next) => {
-    articles.forEach((x) => {
-      enhance(x);
-    });
-
     const { categoryName, type } = routeMap[routeKey];
 
     res.render('category', { categoryName, articles: articles.filter((x) => x.type == type), moment });
