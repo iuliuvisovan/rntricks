@@ -1,7 +1,7 @@
 module.exports = {
   date: '06/03/2020',
   type: 'Answer',
-  title: 'How Do You Hide The Keyboard in React Native?',
+  title: 'How To Hide The Keyboard in React Native?',
   subtitle: '',
   body: [
     {
@@ -19,11 +19,9 @@ module.exports = {
     {
       type: 'pre',
       innerText: `
-<ScrollView contentContainerStyle={{flexGrow: 1}}
-  keyboardShouldPersistTaps='handled'
->
-  <TextInput keyboardType='numeric'/>
-</ScrollView>
+  <ScrollView <b>keyboardDismissMode="always"</b>>
+    <TextInput />
+  </ScrollView>
       `,
     },
   ],

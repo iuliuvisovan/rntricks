@@ -15,7 +15,11 @@ const requireAndEnhance = (_, i) => {
     const article = require(`./articles/${i + 1}/data.js`);
     article.body.forEach((x) => {
       if (x.type == 'pre') {
+        x.innerText = x.innerText.replace(/<\/b>/g, 'escapeMeBoyTwo');
+        x.innerText = x.innerText.replace(/<b>/g, 'escapeMeBoy');
         x.innerText = x.innerText.replace(/</g, '&lt;');
+        x.innerText = x.innerText.replace(/escapeMeBoyTwo/g, '</b>');
+        x.innerText = x.innerText.replace(/escapeMeBoy/g, '<b>');
       }
     });
     return enhance({
