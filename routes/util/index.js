@@ -11,8 +11,7 @@ module.exports = {
     return currentArticle;
   },
   mapBlockToHtml: ({ type, innerText, url, className, alt }, articleUrl) => {
-    const hrefOrSrc = url ? (type == 'a' ? `href="${url}"` : `src="/article/${articleUrl}/img/${url}"`) : '';
-
+    const hrefOrSrc = url ? (type == 'a' ? `href="${url}"` : `src="${articleUrl}/img/${url}"`) : '';
     return `<${type} 
                 ${hrefOrSrc}
                 ${className ? 'class' + `="${className}"` : ''}
