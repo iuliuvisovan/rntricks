@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const enhance = (article) => {
-  article.url = article.title.replace(/\s/g, '-').toLowerCase();
+  article.url = article.title.replace(/[?!-:]/g, '').replace(/\s/g, '-').toLowerCase();
   article.color = typeColors[article.type];
   const coverImageUrl = `/article/${article.url}/img/cover.jpg`;
 

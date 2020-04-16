@@ -1,14 +1,12 @@
 const articles = require('../../data/articles');
 
-const titleToUrl = (title) => title.replace(/\s/g, '-').toLowerCase();
-
 module.exports = {
   getArticleByUrl: (url) => {
     const nextIndex = url.includes('/img/') ? url.indexOf('/img/') : undefined;
 
     const incomingArticleUrl = url.substring(url.indexOf('article/') + 8, nextIndex);
 
-    const currentArticle = articles.find(({ title }) => titleToUrl(title) == incomingArticleUrl);
+    const currentArticle = articles.find(({ url }) => url == incomingArticleUrl);
 
     return currentArticle;
   },
