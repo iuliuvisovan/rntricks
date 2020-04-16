@@ -31,12 +31,13 @@
         <div class="nav-btns">
           <!-- <button class="aside-btn"><i class="fa fa-bars"></i></button> -->
           <button class="search-btn"><i class="fa fa-search"></i></button>
-          <div class="search-form">
+          <div class="search-form <%= (locals.query||'').trim().length && 'active' %>">
             <input
+              autofocus
               class="search-input"
               type="text"
               placeholder="Find article..."
-              onkeyup="event.keyCode == 13 && (window.location.href = 'search')"
+              onkeyup="event.keyCode == 13 && (window.location.href = '/search?q=' + this.value)"
               name="search"
               value="<%= locals.query || '' %>"
             />
