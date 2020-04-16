@@ -1,10 +1,17 @@
 const fs = require('fs');
 const path = require('path');
+const moment = require('moment');
 
 const enhance = (article) => {
-  article.url = article.title.replace(/[?!-:]/g, '').replace(/\s/g, '-').toLowerCase();
+  const articleHref = article.title
+    .replace(/[\?\!\-\:]/g, '')
+    .replace(/\s/g, '-')
+    .toLowerCase();
+  article.url = `/article/${articleHref}`;
   article.color = typeColors[article.type];
-  const coverImageUrl = `/article/${article.url}/img/cover.jpg`;
+  article.datePublishedJsonLd = moment(article.date, 'DD/MM/YYYY').format('YYYY-MM-DD 18:23:32');
+
+  const coverImageUrl = `${article.url}/img/cover.jpg`;
 
   article.coverImageUrl = fs.existsSync(path.resolve(`./data/articles/${article.id}/img/cover.jpg`)) ? coverImageUrl : '/img/default-cover.jpg';
   return article;

@@ -11,12 +11,13 @@
     <meta name="description" content="<%= article.subtitle %>" />
     <meta name="author" content="rntricks.com" />
     <meta name="theme-color" content="<%= article.color %>" />
-    <meta property="og:url" content="https://rntricks.com/article/<%= article.url %>" />
+    <meta property="og:url" content="http://rntricks.com/<%= article.url %>" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="<%= article.title %>" />
-    <meta property="og:description" content="/article/<%= article.subtitle %>/img/cover.jpg" />
-    <meta property="og:image" content="https://rntricks.com/article/<%= article.url %>/img/cover.jpg" />
-    <%- include partials/resources.ejs %>
+    <meta property="og:description" content="<%= article.subtitle || (article.body[0].innerText + article.body[1].innerText)  %>" />
+    <meta property="og:image" content="http://rntricks.com/<%= article.coverImageUrl %>" />
+    <%- include partials/resources.ejs %> 
+    <%- include('partials/jsonld', { article }) %>
   </head>
 
   <body>
@@ -27,7 +28,7 @@
       async
       defer
       crossorigin="anonymous"
-      src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0&appId=306856700168414&autoLogAppEvents=1"
+      src="http://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0&appId=306856700168414&autoLogAppEvents=1"
     ></script>
     <div class="article">
       <div class="article-header">
@@ -53,7 +54,7 @@
       </div>
     </div>
 
-    <%- include('partials/footer', { dataHref: `https://www.rntricks.com/article/${article.url}`, href:
-    `https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.rntricks.com%2Farticle%2F${article.url}%2F&amp;src=sdkpreparse`, type: 'article' }) %>
+    <%- include('partials/footer', { dataHref: `http://www.rntricks.com${article.url}`, href:
+    `http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.rntricks.com${article.url}%2F&amp;src=sdkpreparse`, type: 'article' }) %>
   </body>
 </html>

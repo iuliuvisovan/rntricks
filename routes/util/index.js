@@ -4,7 +4,7 @@ module.exports = {
   getArticleByUrl: (url) => {
     const nextIndex = url.includes('/img/') ? url.indexOf('/img/') : undefined;
 
-    const incomingArticleUrl = url.substring(url.indexOf('article/') + 8, nextIndex);
+    const incomingArticleUrl = url.substring(0, nextIndex);
 
     const currentArticle = articles.find(({ url }) => url == incomingArticleUrl);
 

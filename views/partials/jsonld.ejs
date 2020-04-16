@@ -1,0 +1,22 @@
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http://www.rntricks.com<%= article.url %>"
+    },
+    "headline": "<%= article.title %>",
+    "image": ["http://www.rntricks.com<%= article.coverImageUrl %>"],
+    "datePublished": "<%= article.datePublishedJsonLd %>",
+    "dateModified": "<%= article.datePublishedJsonLd %>",
+    "author": { "@type": "Organization", "name": "RNTricks" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RNTricks",
+      "url": "http://www.rntricks.com/",
+      "logo": { "@type": "ImageObject", "url": "http://www.rntricks.com/img/logo-small.png" }
+    },
+    "description": "<%= article.subtitle || (article.body[0].innerText + article.body[1].innerText) %>"
+  }
+</script>

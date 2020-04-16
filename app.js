@@ -16,16 +16,16 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(__dirname + '/public'));
 
+app.use((req, res, next) => {
+  req.url = req.url.replace(/[/]+/g, '/');
+  req.originalUrl = req.originalUrl.replace(/[/]+/g, '/');
+  next();
+});
+
 app.use('/', require('./routes/index-router'));
 app.use('/article', require('./routes/article-router'));
 app.use('/category', require('./routes/category-router'));
 app.use('/search', require('./routes/search-router'));
-
-// app.get('/article/*/img/test.jpg', (req, res) => {
-//   console.log('req', req.originalUrl);
-
-//   res.sendFile('./landing-page/about.html', { root: __dirname });
-// });
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
