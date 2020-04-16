@@ -11,11 +11,11 @@
     <meta name="description" content="<%= article.subtitle %>" />
     <meta name="author" content="rntricks.com" />
     <meta name="theme-color" content="<%= article.color %>" />
-    <meta property="og:url" content="http://rntricks.com/<%= article.url %>" />
+    <meta property="og:url" content="http://rntricks.com<%= article.url %>" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="<%= article.title %>" />
     <meta property="og:description" content="<%= article.subtitle || (article.body[0].innerText + article.body[1].innerText)  %>" />
-    <meta property="og:image" content="http://rntricks.com/<%= article.coverImageUrl %>" />
+    <meta property="og:image" content="http://rntricks.com<%= article.coverImageUrl %>" />
     <%- include partials/resources.ejs %> 
     <%- include('partials/jsonld', { article }) %>
   </head>
