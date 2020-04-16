@@ -1,5 +1,5 @@
 module.exports = {
-  date: '06/03/2020',
+  date: '08/04/2020',
   type: 'Answer',
   title: 'What is the difference between Expo and React Native?',
   subtitle: '',

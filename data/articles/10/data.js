@@ -1,5 +1,5 @@
 module.exports = {
-  date: '07/03/2020',
+  date: '13/03/2020',
   type: 'Answer',
   title: 'Maximum update depth exceeded error - how to fix',
   subtitle: '',
@@ -19,7 +19,7 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `The issue is that you have an infinite loop, somewhere in your code.`,
+      innerText: `The issue is that you have an infinite loop somewhere in your code.`,
     },
     {
       type: 'p',
