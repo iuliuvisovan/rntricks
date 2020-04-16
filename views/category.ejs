@@ -34,7 +34,7 @@
           </div>
 
           <!-- post -->
-          <% articles.sort((a,b) => +moment(a.date, 'DD/MM/YYYY') - +moment(b.date, 'DD/MM/YYYY')).slice(0, 2).map((article) => { %>
+          <% articles.sort((a,b) => +moment(b.date, 'DD/MM/YYYY') - +moment(a.date, 'DD/MM/YYYY')).map((article) => { %>
           <div class="col-md-6">
             <div class="post post-thumb">
               <a class="post-img" href="/article/<%= article.url %>">
