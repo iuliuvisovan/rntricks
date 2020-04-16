@@ -30,7 +30,7 @@
         <!-- search & aside toggle -->
         <div class="nav-btns">
           <!-- <button class="aside-btn"><i class="fa fa-bars"></i></button> -->
-          <button class="search-btn"><i class="fa fa-search"></i></button>
+          <button aria-label="Search" class="search-btn"><i class="fa fa-search"></i></button>
           <div class="search-form <%= (locals.query||'').trim().length && 'active' %>">
             <input
               autofocus
@@ -63,7 +63,7 @@
       </div>
       <!-- /nav -->
       <!-- aside nav close -->
-      <button class="nav-aside-close"><i class="fa fa-times"></i></button>
+      <button aria-label="Close Search" class="nav-aside-close"><i class="fa fa-times"></i></button>
       <!-- /aside nav close -->
     </div>
     <!-- Aside Nav -->
