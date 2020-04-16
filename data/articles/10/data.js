@@ -5,15 +5,6 @@ module.exports = {
   subtitle: '',
   body: [
     {
-      type: 'p',
-      innerText: `You might sometimes get an error like this:`,
-    },
-    {
-      type: 'img',
-      url: `infiniteloop.jpg`,
-      alt: `Infinite loop code`,
-    },
-    {
       type: 'h2',
       innerText: `What is the problem?`,
     },

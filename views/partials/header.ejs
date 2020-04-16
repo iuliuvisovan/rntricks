@@ -32,7 +32,14 @@
           <!-- <button class="aside-btn"><i class="fa fa-bars"></i></button> -->
           <button class="search-btn"><i class="fa fa-search"></i></button>
           <div class="search-form">
-            <input class="search-input" type="text" name="search" placeholder="Find article..." />
+            <input
+              class="search-input"
+              type="text"
+              placeholder="Find article..."
+              onkeyup="event.keyCode == 13 && (window.location.href = 'search')"
+              name="search"
+              value="<%= locals.query || '' %>"
+            />
             <button class="search-close"><i class="fa fa-times"></i></button>
           </div>
         </div>

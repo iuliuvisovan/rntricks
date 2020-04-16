@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      RNTricks - React Native Tips, Tricks & More
+    </title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="RNTricks" />
+    <meta name="description" content="Home to everything React Native tips, tricks, tutorials and articles" />
+    <meta name="author" content="RNTricks" />
+    <meta name="theme-color" content="<%= (articles[0] || {}).color ||  '#b0d0d3'%>" />
+    <meta property="og:url" content="https://rntricks.com/article/how-to-maximize-your-coding-efficiency-when-writing-react-native" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="RNTricks - React Native Tips, Tricks & More" />
+    <meta property="og:description" content="Home to everything React Native tips, tricks, tutorials and articles" />
+    <meta property="og:image" content="https://rntricks.com/img/default-cover.jpg" />
+    <%- include partials/resources.ejs %>
+  </head>
+  <body>
+    <%- include('partials/header', { selectedPage: 'None' }) %>
+
+    <!-- section -->
+    <div class="section">
+      <!-- container -->
+      <div class="container">
+        <!-- row -->
+        <div class="row" style="margin: 0 -30px;">
+          <div class="col-md-12">
+            <div class="section-title">
+              <h2 class="featured-articles-title">Found articles:</h2>
+            </div>
+          </div>
+
+          <!-- post -->
+          <% articles.sort((a,b) => +moment(b.date, 'DD/MM/YYYY') - +moment(a.date, 'DD/MM/YYYY')).map((article) => { %>
+          <div class="col-md-6">
+            <div class="post post-thumb">
+              <a class="post-img" href="/article/<%= article.url %>">
+                <img src="<%= article.coverImageUrl %>" alt="Article Cover Photo" />
+              </a>
+              <div class="post-body">
+                <div class="post-meta">
+                  <a class="post-category cat-2" style="background-color: <%= article.color %>;" href="category.html"><%= article.type %></a>
+                  <span class="post-date"><%= moment(article.date, 'DD/MM/YYYY').format('MMMM DD, YYYY') %></span>
+                </div>
+                <h3 class="post-title">
+                  <a href="/article/<%= article.url %>">
+                    <%= article.title %>
+                  </a>
+                </h3>
+              </div>
+            </div>
+          </div>
+          <% }) %>
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+    </div>
+    <!-- /section -->
+
+    <%- include('partials/footer', { dataHref: `http://www.rntricks.com/`, href:
+    `https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.rntricks.com%2F&amp;src=sdkpreparse`, type: 'index' }) %>
+  </body>
+</html>
