@@ -11,7 +11,19 @@ module.exports = {
     return currentArticle;
   },
   mapBlockToHtml: ({ type, innerText, url, className, alt }, articleUrl) => {
-    const hrefOrSrc = url ? (type == 'a' ? `href="${url}"` : `src="${articleUrl}/img/${url}"`) : '';
+    `src="${articleUrl}/img/${url}"`;
+
+    if (type == 'img') {
+      return `<picture>
+      <source srcset="${articleUrl}/img/${url.replace('.jpg', '.webp')}" type="image/webp" />
+      <source srcset="${articleUrl}/img/${url}" type="image/jpeg" />
+      <img src="${articleUrl}/img/${url}" ${alt ? 'alt' + `="${alt}"` : ''} />
+      </picture>
+      `;
+    }
+
+    const hrefOrSrc = url ? `href="${url}"` : '';
+
     return `<${type} 
                 ${hrefOrSrc}
                 ${className ? 'class' + `="${className}"` : ''}

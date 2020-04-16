@@ -47,7 +47,11 @@
           <%= moment(article.date, 'DD/MM/YYYY').format('MMMM DD, YYYY') %>
         </span>
       </div>
-      <img class="article-cover" src="<%= article.coverImageUrl %>" alt="Article cover photo" />
+      <picture class="article-cover">
+        <source srcset="<%= article.coverImageUrl.replace('.jpg', '.webp') %>" type="image/webp" />
+        <source srcset="<%= article.coverImageUrl %>" type="image/jpeg" />
+        <img src="<%= article.coverImageUrl %>" alt="Article Cover Photo" />
+      </picture>
 
       <div class="article-body">
         <%- article.body.map(block => mapBlockToHtml(block, article.url)).join('') %>
