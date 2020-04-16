@@ -5,14 +5,13 @@ const moment = require('moment');
 const { getArticleByUrl, mapBlockToHtml } = require('./util');
 
 router.get('/*', (req, res, next) => {
-  console.log('req.url', req.url);
-  console.log('req.originalUrl', req.originalUrl);
+  const requestedUrl = req.baseUrl + req.path;
 
-  const article = getArticleByUrl(req.originalUrl);
+  const article = getArticleByUrl(requestedUrl);
 
   if (article) {
-    if (req.originalUrl.includes('/img')) {
-      const requestedImageName = req.originalUrl.substring(req.originalUrl.lastIndexOf('/'));
+    if (requestedUrl.includes('/img')) {
+      const requestedImageName = requestedUrl.substring(requestedUrl.lastIndexOf('/'));
       const resolvedFilePath = path.resolve(`./data/articles/${article.id}/img${requestedImageName}`);
 
       res.sendFile(resolvedFilePath);
