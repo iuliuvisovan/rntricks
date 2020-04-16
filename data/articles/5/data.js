@@ -1,8 +1,8 @@
 module.exports = {
   date: '20/03/2020',
   type: 'Article',
-  title: '7 Ways In Which React Native Is Better',
-  subtitle: '...than the web.',
+  title: '7 Ways In Which React Native Is Better Than the Web',
+  subtitle: 'It\'s all a \'what could\'ve been\' story now.',
   body: [
     {
       type: 'p',

@@ -1048,3 +1048,7 @@ button {
 .nav-btns .search-form .search-close {
   right: 25px;
 }
+
+.post-title a {
+  text-transform: capitalize;
+}
