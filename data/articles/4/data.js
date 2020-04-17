@@ -60,7 +60,6 @@ module.exports = {
       type: 'p',
       innerText: `The code looks like this:`,
     },
-
     {
       type: 'pre',
       innerText: `

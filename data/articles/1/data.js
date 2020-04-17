@@ -216,9 +216,17 @@ module.exports = {
       innerText: `The code looks like this:`,
     },
     {
-      type: 'img',
-      url: `statscode.jpg`,
-      alt: `Code about player statts`,
+      type: 'pre',
+      innerText: `
+  &lt;View>
+    {stats.map(stat => 
+      &ltStat {...stat} />
+    )}
+  &lt;/View>
+  
+  ...
+
+  export const Stat = ({ value = '', name }) => ...`,
     },
     {
       type: 'p',
@@ -239,9 +247,13 @@ module.exports = {
       innerText: `But Fast Refresh enables us to go a step further:`,
     },
     {
-      type: 'img',
-      url: `statscode2.jpg`,
-      alt: `Code about player stats`,
+      type: 'pre',
+      innerText: `
+  <View>
+    {stats.map(stat => 
+      <Stat dog={<b>console.log(stat)</b>} {...stat} />
+    )}
+  </View>`,
     },
     {
       type: 'p',
