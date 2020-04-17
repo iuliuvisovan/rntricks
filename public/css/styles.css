@@ -460,8 +460,11 @@ textarea.input {
   padding-bottom: 40px;
 }
 #footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   border-top: 1px solid #f4f4f9;
-  padding-top: 15px;
 }
 #footer img {
   height: 100px;
