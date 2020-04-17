@@ -35,7 +35,7 @@
         <div class="nav-btns">
           <!-- <button class="aside-btn"><i class="fa fa-bars"></i></button> -->
           <button aria-label="Search" class="search-btn"><i class="fa fa-search"></i></button>
-          <div class="search-form <%= (locals.query||'').trim().length && 'active' %>">
+          <div class="search-form <%= (locals.query||'').trim().length ? 'active' : '' %>">
             <input
               autofocus
               class="search-input"
