@@ -41,7 +41,7 @@
                 <picture>
                   <source srcset="<%= article.coverImageUrl.replace('.jpg', '.webp') %>" type="image/webp" />
                   <source srcset="<%= article.coverImageUrl %>" type="image/jpeg" />
-                  <img src="<%= article.coverImageUrl %>" alt="Article Cover Photo" />
+                  <img loading="lazy" src="<%= article.coverImageUrl %>" alt="Article Cover Photo" />
                 </picture>
               </a>
               <div class="post-body">
@@ -79,7 +79,7 @@
                   <picture>
                     <source srcset="<%= article.coverImageUrl.replace('.jpg', '.webp') %>" type="image/webp" />
                     <source srcset="<%= article.coverImageUrl %>" type="image/jpeg" />
-                    <img src="<%= article.coverImageUrl %>" alt="Article Cover Photo" />
+                    <img loading="lazy" src="<%= article.coverImageUrl %>" alt="Article Cover Photo" />
                   </picture>
                 </a>
                 <div class="post-body">
