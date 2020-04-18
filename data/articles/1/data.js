@@ -3,6 +3,7 @@ module.exports = {
   type: 'Tips & Tricks',
   isFeatured: true,
   title: '7 Tips For Maximizing Efficiency When Writing React Native Apps',
+  ogUrl: 'https://bit.do/',
   subtitle: "React Native is a complex tool, but building apps with it doesn't have to be cumbersome.",
   body: [
     {
