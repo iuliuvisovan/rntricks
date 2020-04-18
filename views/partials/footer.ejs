@@ -4,8 +4,9 @@
   <div class="container">
     <br />
     <br />
-    <%= type == 'article' ? 'Found this article useful? Share it with others:' : 'Liked this page?' %>
+    <%= type == 'article' ? 'Liked this article?' : 'Liked this page?' %>
     <br />
+    <span>Share it with others:</span>
     <br />
     <div class="fb-share-button" data-href="<%= dataHref %>" data-layout="box_count" data-size="large">
       <a target="_blank" href="<%= href %>" class="fb-xfbml-parse-ignore">Share</a>
