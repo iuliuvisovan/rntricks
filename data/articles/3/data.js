@@ -2,7 +2,7 @@ module.exports = {
   date: '15/04/2020',
   type: 'Tutorial',
   title: 'How to Translate Your React Native App',
-  ogUrl: 'https://bit.do/',
+  ogUrl: 'https://ow.ly/',
   subtitle: 'It\'s not a matter of "if", but "when". Let\'s see how.',
   body: [
     {
