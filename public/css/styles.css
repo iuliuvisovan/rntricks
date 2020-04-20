@@ -348,7 +348,7 @@ textarea.input {
   color: #212631;
   font-size: 22px;
   padding: 0;
-} 
+}
 /*----------------------------*\
 	post
 \*----------------------------*/
@@ -478,7 +478,6 @@ textarea.input {
   }
 }
 
-
 .fa {
   color: #212631;
 }
@@ -561,7 +560,7 @@ code {
 }
 
 .article {
-  width: 618px;
+  width: 700px;
   margin-top: 25px;
   max-width: calc(100vw - 30px);
 }
@@ -626,8 +625,10 @@ code {
 }
 
 p.indented {
-  margin-left: 24px;
+  margin-left: 3vw;
+  padding-right: 3vw;
 }
+
 p.indented::first-letter {
   font-weight: bold;
 }

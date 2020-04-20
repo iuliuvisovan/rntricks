@@ -147,9 +147,9 @@ module.exports = {
 <b>
   import translation from './translation/en';
 
-  type TranslationKeys = keyof typeof translation;
+  type TKeys = keyof typeof translation;
 
-  function translate<K extends TranslationKeys>(key: K, options?: Object) {
+  function translate<K extends TKeys>(key: K, options?: Object) {
     return i18next.t(key, options);
   }
 </b>
