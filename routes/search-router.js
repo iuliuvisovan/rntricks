@@ -6,7 +6,7 @@ const moment = require('moment');
 router.get('/', (req, res, next) => {
   const { q } = req.query;
 
-  res.render('search', { articles: articles.filter(({ title }) => title.toLowerCase().includes(q)), moment, query: q });
+  res.render('search', { articles: articles.filter(({ title }) => title.toLowerCase().includes((q || '').trim().toLowerCase())), moment, query: q });
 });
 
 module.exports = router;
