@@ -806,3 +806,17 @@ pre {
 .article h2 {
   text-transform: capitalize;
 }
+
+.aside-btn {
+  padding: 0 25px;
+}
+
+@media (max-width: 768px) {
+  .aside-btn,
+  .search-btn {
+    padding: 25px 12px!important;
+  }
+  .brand-text {
+    margin-right: -30px;
+  }
+}

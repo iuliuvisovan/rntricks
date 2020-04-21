@@ -14,7 +14,7 @@
               <img style="margin-top: 4px;" src="/img/logo-small.png" alt="RNTricks logo" />
             </picture>
           </a>
-          <a href="/">
+          <a href="/" class="brand-text">
             <h1 style="display: inline-block; width: auto; margin: 0; margin-left: 5px; font-size: 40px; font-weight: 100; letter-spacing: -3px;">
               <span style="padding-right: 4px; font-weight: 400;">RN</span>TRICKS
             </h1>
@@ -34,6 +34,12 @@
         <!-- search & aside toggle -->
         <div class="nav-btns">
           <!-- <button class="aside-btn"><i class="fa fa-bars"></i></button> -->
+          <a href="https://www.facebook.com/rntricksfb" target="_blank" class="aside-btn">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/rntricksinsta/" target="_blank" class="aside-btn">
+            <i class="fa fa-instagram"></i>
+          </a>
           <button aria-label="Search" class="search-btn"><i class="fa fa-search"></i></button>
           <div class="search-form <%= (locals.query||'').trim().length ? 'active' : '' %>">
             <input
