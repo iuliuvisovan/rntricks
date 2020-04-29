@@ -47,5 +47,5 @@ const typeColors = {
 
 module.exports = [...new Array(1000)]
   .map(requireAndEnhance)
-  .filter((x) => x)
-  .filter((x) => !(x || {}).hidden);
+  .filter((x) => x);
+  // .filter((x) => !(x || {}).hidden);
