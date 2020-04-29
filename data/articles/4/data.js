@@ -2,6 +2,7 @@ module.exports = {
   date: '14/03/2020',
   type: 'Tips & Tricks',
   title: 'Use This Fast Refresh Trick To Quickly Debug Your React Native App',
+  hidden: true,
   subtitle: 'Inspect your UI and data with this quick trick.',
   body: [
     {
@@ -31,8 +32,8 @@ module.exports = {
       alt: 'Live Reload demo gif',
     },
     {
-        type: 'p',
-        innerText: `<br/>It might seem simple and limited, but it turns out to be just what you need 95% of the time.`,
+      type: 'p',
+      innerText: `<br/>It might seem simple and limited, but it turns out to be just what you need 95% of the time.`,
     },
     {
       type: 'p',

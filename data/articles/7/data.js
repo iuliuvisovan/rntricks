@@ -2,7 +2,7 @@ module.exports = {
   date: '08/03/2020',
   type: 'Answer',
   title: 'How To Hide The Keyboard in React Native?',
-  isFeatured: true,
+  hidden: true,
   subtitle: '',
   body: [
     {

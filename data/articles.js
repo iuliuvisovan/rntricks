@@ -45,4 +45,7 @@ const typeColors = {
   Answer: '#4bb92f',
 };
 
-module.exports = [...new Array(1000)].map(requireAndEnhance).filter((x) => x);
+module.exports = [...new Array(1000)]
+  .map(requireAndEnhance)
+  .filter((x) => x)
+  .filter((x) => !(x || {}).hidden);
