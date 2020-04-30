@@ -4,8 +4,11 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const compression = require('compression');
+const ampCors = require('@ampproject/toolbox-cors');
 
 const app = express();
+
+app.use(ampCors());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
