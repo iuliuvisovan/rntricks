@@ -267,7 +267,7 @@ textarea.input {
   transition: 0.2s color;
   text-transform: uppercase;
   position: relative;
-  padding: 25px calc(2vw - 7px);
+  padding: 25px calc(1.6vw - 3px);
   font-family: 'Roboto';
   font-weight: 500;
 }
