@@ -14,8 +14,7 @@
   </div>
   <!-- /row -->
 </footer>
-<!-- /Footer -->
-<link rel="stylesheet" href="/css/font-awesome.min.css" />
+
 <% if(!locals.isAmp) { %>
   <script defer async src="/js/app.js"></script>
   
@@ -70,18 +69,17 @@
   </script>
 </body>
 <% } else { %>
-  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
   <amp-analytics type="gtag" data-credentials="include">
-  <script type="application/json">
-  {
-    "vars" : {
-      "gtag_id": "UA-162918443-3",
-      "config" : {
-        "UA-162918443-3": { "groups": "default" }
+    <script type="application/json">
+      {
+        "vars": {
+          "gtag_id": "UA-162918443-3",
+          "config": {
+            "UA-162918443-3": { "groups": "default" }
+          }
+        }
       }
-    }
-  }
-  </script>
+    </script>
   </amp-analytics>
 <% }  %>
 

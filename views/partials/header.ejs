@@ -7,7 +7,7 @@
         <div class="left-container">
           <div class="nav-logo" style="display: flex; align-items: center;">
             <a href="/" class="logo">
-              <img src="/img/logo.svg" alt="RNTricks logo" />
+              <%- locals.isAmp ? '<amp-img layout="fixed" height="40" width="40"  src="/img/logo.svg" alt="RNTricks logo" />' : '<img src="/img/logo.svg" alt="RNTricks logo" />' %>
             </a>
             <a href="/" class="brand-text">
               <h1 style="display: inline-block; width: auto; margin: 0; margin-left: 5px; font-size: 40px; font-weight: 100; letter-spacing: -3px;">
@@ -40,7 +40,9 @@
               class="search-input"
               type="text"
               placeholder="Find article..."
-              onkeyup="event.keyCode == 13 && (window.location.href = '/search?q=' + this.value)"
+              <% if(locals.inSearch) { %>
+                onkeyup="event.keyCode == 13 && (window.location.href = '/search?q=' + this.value)"
+              <% } %>
               name="search"
               value="<%= locals.query || '' %>"
             />
@@ -51,12 +53,13 @@
       </div>
     </div>
   </div>
-  <!-- /Main Nav -->
-  <div id="fb-root"></div>
-  <script
-    async
-    defer
-    crossorigin="anonymous"
-    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0&appId=306856700168414&autoLogAppEvents=1"
-  ></script>
+  <% if(!isAmp) { %>
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0&appId=306856700168414&autoLogAppEvents=1"
+    ></script>
+  <% } %>
 </header>
