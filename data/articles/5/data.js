@@ -8,7 +8,7 @@ module.exports = {
   body: [
     {
       type: 'p',
-      innerText: `<i>"It makes no sense to compare 2 technologies that are meant for 2 different things"</i>, you might say. But having spent almost 3 years writing React Native, and then once every few months occasionally coming back to the web, I couldn't help but notice how much less sense the web makes.`,
+      innerText: `"It makes no sense to compare 2 technologies that are meant for 2 different things", you might say. But having spent almost 3 years writing React Native, and then once every few months occasionally coming back to the web, I couldn't help but notice how much less sense the web makes.`,
     },
     {
       type: 'p',
@@ -44,7 +44,7 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `Being able to just plug-n-play any library that you find on the web and be 100% sure that it isn't influenced by any of your styles and just works - really nice. The fact that your code doesn't <i>rely</i> on the order of its style declarations - really nice. The fact that your code never gets to a point where the only way out of nasty bugs is filling your code with <b>!important</b>s - incredibly nice.`,
+      innerText: `Being able to just plug-n-play any library that you find on the web and be 100% sure that it isn't influenced by any of your styles and just works - really nice. The fact that your code doesn't <b>rely</b> on the order of its style declarations - really nice. The fact that your code never gets to a point where the only way out of nasty bugs is filling your code with <b>!important</b>s - incredibly nice.`,
     },
     {
       type: 'p',

@@ -12,7 +12,7 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `It <i>is</i> true that any translation library that works for React will also do the trick for React Native. There's <a href="https://phrase.com/blog/posts/react-i18n-best-libraries/">about 5 or 6 main options that you could choose from</a>.`,
+      innerText: `It *is* true that any translation library that works for React will also do the trick for React Native. There's <a href="https://phrase.com/blog/posts/react-i18n-best-libraries/">about 5 or 6 main options that you could choose from</a>.`,
     },
     {
       type: 'p',
@@ -131,7 +131,7 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `<i>Feel free to use <code>t</code> instead of <code>T</code>. We prefer it for visibility purposes.</i>`,
+      innerText: `Feel free to use <code>t</code> instead of <code>T</code>. We prefer it for visibility purposes.`,
     },
     {
       type: 'h2',
