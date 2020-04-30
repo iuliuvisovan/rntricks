@@ -40,7 +40,7 @@
               class="search-input"
               type="text"
               placeholder="Find article..."
-              <% if(locals.inSearch) { %>
+              <% if(locals.inSearch || !locals.isAmp) { %>
                 onkeyup="event.keyCode == 13 && (window.location.href = '/search?q=' + this.value)"
               <% } %>
               name="search"
