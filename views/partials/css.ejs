@@ -1,4 +1,4 @@
-<style>
+<style amp-custom>
   html {
     overflow-x: hidden;
   }
@@ -12,34 +12,42 @@
     padding: 15px;
     margin: 0;
   }
-  /* 
-body {
-  font-size: 16px;
-  font-weight: 300;
-  color: #3d455c;
-  margin: 0;
-  padding: 15px;
-  overflow-x: hidden;
-} */
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: 700;
+    color: #212631;
+    margin: 0px 0px 15px;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  h1 {
+    font-size: 34px;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 28px;
+    font-weight: 500;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  p,
+  img,
   h1,
   h2,
   h3,
   h4,
-  h5,
-  h6 {
-    font-weight: 700;
-    color: #212631;
-    margin: 0px 0px 15px;
+  code {
+    max-width: 100%;
   }
-  h1 {
-    font-size: 34px;
-  }
-  h2 {
-    font-size: 28px;
-  }
-  h4 {
-    font-size: 16px;
-  }
+
   a {
     font-weight: 600;
     color: #212631;
@@ -54,82 +62,12 @@ body {
   p {
     margin: 0px 0px 20px;
   }
-  ul,
-  ol {
+  ul {
     margin: 0;
     padding: 0;
     list-style: none;
   }
-  ul.list-style,
-  ol.list-style {
-    padding-left: 15px;
-    margin-bottom: 10px;
-  }
-  ul.list-style {
-    list-style-type: disc;
-  }
-  ol.list-style {
-    list-style-type: decimal;
-  }
-  blockquote.blockquote {
-    position: relative;
-    border-left: 0;
-    font-weight: 600;
-    margin-bottom: 10px;
-    padding: 20px;
-  }
-  blockquote.blockquote:before {
-    content: '``';
-    font-family: 'Nunito Sans', sans-serif;
-    display: block;
-    position: absolute;
-    left: -5px;
-    top: 5px;
-    font-size: 240px;
-    line-height: 200px;
-    color: #eceef2;
-    letter-spacing: -30px;
-    z-index: -2;
-  }
-  figure.figure-img {
-    margin-bottom: 20px;
-  }
-  figure.figure-img figcaption {
-    padding-top: 5px;
-    font-size: 13px;
-    font-weight: 600;
-  }
-  .input {
-    height: 40px;
-    border: 2px solid #eceef2;
-    width: 100%;
-    padding: 0px 15px;
-    -webkit-transition: 0.2s border;
-    transition: 0.2s border;
-  }
-  .input:focus {
-    border-color: #3d455c;
-  }
-  textarea.input {
-    height: 90px;
-    padding: 15px;
-  }
-  .primary-button {
-    padding: 9px 45px;
-    border: none;
-    background-color: #212631;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 13px;
-    color: #fff;
-    -webkit-transition: 0.2s opacity;
-    transition: 0.2s opacity;
-  }
-  .primary-button:hover,
-  .primary-button:focus {
-    color: #fff;
-    opacity: 0.9;
-  }
+
   .section {
     padding-top: 40px;
   }
@@ -144,9 +82,6 @@ body {
   .section .section-title h2 {
     text-transform: capitalize;
     font-size: 28px;
-  }
-  .section-row {
-    margin-bottom: 40px;
   }
   /*=========================================================
 	NAVIGATION
@@ -194,16 +129,7 @@ body {
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
   }
-  @-webkit-keyframes slide-down {
-    from {
-      -webkit-transform: translateY(-100%);
-      transform: translateY(-100%);
-    }
-    to {
-      -webkit-transform: translateY(0%);
-      transform: translateY(0%);
-    }
-  }
+
   @keyframes slide-down {
     from {
       -webkit-transform: translateY(-100%);
@@ -212,16 +138,6 @@ body {
     to {
       -webkit-transform: translateY(0%);
       transform: translateY(0%);
-    }
-  }
-  @-webkit-keyframes slide-up {
-    from {
-      -webkit-transform: translateY(0%);
-      transform: translateY(0%);
-    }
-    to {
-      -webkit-transform: translateY(-100%);
-      transform: translateY(-100%);
     }
   }
   @keyframes slide-up {
@@ -547,32 +463,6 @@ body {
     text-transform: capitalize;
   }
 
-  h1,
-  h2,
-  h3,
-  h4 {
-    width: 100%;
-    font-family: 'Roboto', sans-serif;
-  }
-
-  h1 {
-    font-weight: 600;
-  }
-
-  h2 {
-    font-weight: 500;
-  }
-
-  p,
-  img,
-  h1,
-  h2,
-  h3,
-  h4,
-  code {
-    max-width: 100%;
-  }
-
   .index-wrapper {
     display: flex;
     flex-direction: column;
@@ -867,7 +757,8 @@ body {
       font-size: 14px;
     }
     .top-container,
-    .index-wrapper {
+    .index-wrapper,
+    .nav-btns .search-form {
       max-width: calc(100vw - 30px);
     }
     .featured-article {
