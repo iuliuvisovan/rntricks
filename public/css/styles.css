@@ -267,7 +267,7 @@ textarea.input {
   transition: 0.2s color;
   text-transform: uppercase;
   position: relative;
-  padding: 25px 1vw;
+  padding: 25px calc(2vw - 7px);
   font-family: 'Roboto';
   font-weight: 500;
 }
@@ -331,9 +331,12 @@ textarea.input {
 .nav-btns a {
   margin-left: 32px;
 }
+.nav-btns a:first-of-type {
+  margin-left: 0;
+}
 .nav-btns .search-form {
   position: absolute;
-  left: 0;
+  left: -15px;
   right: 0;
   top: 0;
   bottom: 0px;
@@ -345,7 +348,8 @@ textarea.input {
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
   height: 70px;
-  max-width: 1000px;
+  width: 1200px;
+  max-width: calc(100vw - 120px);
 }
 .nav-btns .search-form.active {
   opacity: 1;
@@ -357,9 +361,11 @@ textarea.input {
   border: none;
   background: #fff;
   padding: 0px;
-  font-weight: 600;
+  font-weight: 100;
+  font-size: 20px;
   height: 48px;
   margin-top: 12px;
+  outline: none;
 }
 .nav-btns .search-form .search-close {
   position: absolute;
@@ -374,6 +380,7 @@ textarea.input {
   color: #212631;
   font-size: 22px;
   padding: 0;
+  cursor: pointer;
 }
 /*----------------------------*\
 	post
@@ -877,5 +884,8 @@ pre {
 
   h2.index-title {
     font-size: 28px;
+  }
+  .nav-btns a {
+    margin-left: 24px;
   }
 }
