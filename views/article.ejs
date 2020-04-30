@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html <%- isAmp ? 'amp' : ''%></html> lang="en">
+<html ⚡ lang="en">
   <head>
     <meta charset="utf-8" />
     <% if(isAmp) { %>
@@ -25,11 +25,12 @@
     <meta property="og:title" content="<%= article.title %>" />
     <meta property="og:description" content="<%= article.subtitle || (article.body[0].innerText + ' ' + article.body[1].innerText + '...')  %>" />
     <meta property="og:image" content="https://www.rntricks.com<%= article.coverImageUrl %>" />
-    <%- include partials/resources.ejs %> <%- include('partials/jsonld', { article }) %>
+    <% if(isAmp) { %> <%- include partials/amp-resources.ejs %> <%- include('partials/jsonld', { article }) %> <% } else { %> <%- include partials/resources.ejs
+    %> <%- include('partials/jsonld', { article }) %> <% }%>
   </head>
 
   <body>
-    <%- include('partials/header', { selectedPage: article.type }) %>
+    <%- include('partials/header', { selectedPage: article.type, isAmp: isAmp }) %>
 
     <div id="fb-root"></div>
     <script
@@ -63,7 +64,7 @@
           <img src="<%= article.coverImageUrl %>" alt="Article Cover Photo" />
         </picture>
         <% } else { %>
-        <amp-img src="<%= article.coverImageUrl.replace('.jpg', '.webp') %>" alt="Welcome" height="420" width="700"></amp-img>
+        <amp-img layout="responsive" src="<%= article.coverImageUrl.replace('.jpg', '.webp') %>" alt="Welcome" height="420" width="700"></amp-img>
         <% }%>
       </div>
 

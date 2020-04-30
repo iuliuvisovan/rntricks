@@ -225,11 +225,10 @@ textarea.input {
 \*----------------------------*/
 .nav-logo {
   float: left;
+  height: 70px;
+  padding-left: 8px;
 }
-.nav-logo .logo {
-  line-height: 70px;
-  display: inline-block;
-}
+
 .nav-logo .logo img {
   height: 40px;
 }
@@ -238,6 +237,10 @@ textarea.input {
 \*----------------------------*/
 .nav-menu {
   margin-left: 20px;
+}
+.nav-menu li {
+  display: inline-block;
+  float: left;
 }
 .nav-menu li a {
   position: relative;
@@ -304,6 +307,12 @@ textarea.input {
 \*----------------------------*/
 .nav-btns {
   float: right;
+  height: 70px;
+  width: 110px;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .nav-btns > button {
   padding: 25px 25px;
@@ -322,6 +331,7 @@ textarea.input {
   visibility: hidden;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
+  height: 70px;
 }
 .nav-btns .search-form.active {
   opacity: 1;
@@ -334,6 +344,8 @@ textarea.input {
   background: #fff;
   padding: 0px;
   font-weight: 600;
+  height: 48px;
+  margin-top: 12px;
 }
 .nav-btns .search-form .search-close {
   position: absolute;
@@ -487,7 +499,6 @@ input {
   font-weight: 100 !important;
   text-transform: uppercase;
   margin-top: -3px;
-  padding-top: 9px !important;
 }
 
 .post-img img {
@@ -807,16 +818,25 @@ pre {
   text-transform: capitalize;
 }
 
-.aside-btn {
-  padding: 0 25px;
+@media (max-width: 768px) {
+  .brand-text {
+    margin-right: -30px;
+  }
+}
+
+.fa {
+  font-size: 16px !important;
+}
+
+.top-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
-  .aside-btn,
-  .search-btn {
-    padding: 25px 12px!important;
-  }
-  .brand-text {
-    margin-right: -30px;
+  .top-container {
+    display: block;
+    padding-right: 8px;
   }
 }

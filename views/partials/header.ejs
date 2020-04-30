@@ -4,11 +4,11 @@
   <div id="nav">
     <!-- Main Nav -->
     <div id="nav-fixed">
-      <div class="container">
+      <div class="container top-container">
         <!-- logo -->
         <div class="nav-logo" style="display: flex; align-items: center;">
           <a href="/" class="logo">
-            <img style="margin-top: 4px;" src="/img/logo.svg" alt="RNTricks logo" />
+            <img src="/img/logo.svg" alt="RNTricks logo" />
           </a>
           <a href="/" class="brand-text">
             <h1 style="display: inline-block; width: auto; margin: 0; margin-left: 5px; font-size: 40px; font-weight: 100; letter-spacing: -3px;">
@@ -18,13 +18,15 @@
         </div>
         <!-- /logo -->
         <!-- nav -->
-        <ul class="nav-menu nav navbar-nav">
-          <li><a href="/" class="<%= selectedPage == 'Home' ? 'selected' : '' %>">Home</a></li>
-          <li class="cat-1"><a href="/category/articles" class="<%= selectedPage == 'Articles' ? 'selected' : '' %>">Articles</a></li>
-          <li class="cat-2"><a href="/category/tips-n-tricks" class="<%= selectedPage == 'Tips & Tricks' ? 'selected' : '' %>">Tips & Tricks</a></li>
-          <li class="cat-3"><a href="/category/answers" class="<%= selectedPage == 'Answer' ? 'selected' : '' %>">Answers</a></li>
-          <li class="cat-4"><a href="/category/tutorials" class="<%= selectedPage == 'Tutorial' ? 'selected' : '' %>">Tutorials</a></li>
-        </ul>
+        <div class="menu-wrapper" style="margin: 0 7px;">
+          <ul class="nav-menu nav navbar-nav">
+            <li><a href="/" class="<%= selectedPage == 'Home' ? 'selected' : '' %>">Home</a></li>
+            <li class="cat-1"><a href="/category/articles" class="<%= selectedPage == 'Articles' ? 'selected' : '' %>">Articles</a></li>
+            <li class="cat-2"><a href="/category/tips-n-tricks" class="<%= selectedPage == 'Tips & Tricks' ? 'selected' : '' %>">Tips & Tricks</a></li>
+            <li class="cat-3"><a href="/category/answers" class="<%= selectedPage == 'Answer' ? 'selected' : '' %>">Answers</a></li>
+            <li class="cat-4"><a href="/category/tutorials" class="<%= selectedPage == 'Tutorial' ? 'selected' : '' %>">Tutorials</a></li>
+          </ul>
+        </div>
         <!-- /nav -->
 
         <!-- search & aside toggle -->
@@ -36,8 +38,8 @@
           <a href="https://www.instagram.com/rntricksinsta/" target="_blank" class="aside-btn">
             <i class="fa fa-instagram"></i>
           </a>
-          <button aria-label="Search" class="search-btn"><i class="fa fa-search"></i></button>
-          <div class="search-form <%= (locals.query||'').trim().length ? 'active' : '' %>">
+          <a aria-label="Search" href="<%= locals.isAmp ? '/search' : '#' %>" class="search-btn"><i class="fa fa-search"></i></a>
+          <div class="search-form <%= locals.inSearch ? 'active' : '' %>">
             <input
               autofocus
               class="search-input"
