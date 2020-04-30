@@ -1,25 +1,21 @@
-<!-- Header -->
 <header id="header">
   <!-- Nav -->
   <div id="nav">
     <!-- Main Nav -->
     <div id="nav-fixed">
       <div class="container top-container">
-        <!-- logo -->
-        <div class="nav-logo" style="display: flex; align-items: center;">
-          <a href="/" class="logo">
-            <img src="/img/logo.svg" alt="RNTricks logo" />
-          </a>
-          <a href="/" class="brand-text">
-            <h1 style="display: inline-block; width: auto; margin: 0; margin-left: 5px; font-size: 40px; font-weight: 100; letter-spacing: -3px;">
-              <span style="padding-right: 4px; font-weight: 400;">RN</span>TRICKS
-            </h1>
-          </a>
-        </div>
-        <!-- /logo -->
-        <!-- nav -->
-        <div class="menu-wrapper" style="margin: 0 7px;">
-          <ul class="nav-menu nav navbar-nav">
+        <div class="left-container">
+          <div class="nav-logo" style="display: flex; align-items: center;">
+            <a href="/" class="logo">
+              <img src="/img/logo.svg" alt="RNTricks logo" />
+            </a>
+            <a href="/" class="brand-text">
+              <h1 style="display: inline-block; width: auto; margin: 0; margin-left: 5px; font-size: 40px; font-weight: 100; letter-spacing: -3px;">
+                <span style="padding-right: 4px; font-weight: 400;">RN</span>TRICKS
+              </h1>
+            </a>
+          </div>
+          <ul class="nav-menu">
             <li><a href="/" class="<%= selectedPage == 'Home' ? 'selected' : '' %>">Home</a></li>
             <li class="cat-1"><a href="/category/articles" class="<%= selectedPage == 'Articles' ? 'selected' : '' %>">Articles</a></li>
             <li class="cat-2"><a href="/category/tips-n-tricks" class="<%= selectedPage == 'Tips & Tricks' ? 'selected' : '' %>">Tips & Tricks</a></li>
@@ -27,7 +23,6 @@
             <li class="cat-4"><a href="/category/tutorials" class="<%= selectedPage == 'Tutorial' ? 'selected' : '' %>">Tutorials</a></li>
           </ul>
         </div>
-        <!-- /nav -->
 
         <!-- search & aside toggle -->
         <div class="nav-btns">
@@ -55,7 +50,8 @@
         <!-- /search & aside toggle -->
       </div>
     </div>
-    <!-- /Main Nav -->
+  </div>
+  <!-- /Main Nav -->
   <div id="fb-root"></div>
   <script
     async
@@ -64,4 +60,3 @@
     src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0&appId=306856700168414&autoLogAppEvents=1"
   ></script>
 </header>
-<!-- /Header -->

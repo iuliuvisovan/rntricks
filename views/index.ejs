@@ -1,97 +1,67 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <%- include partials/index-metaheaders.ejs %>
-    <%- include partials/resources.ejs %>
+    <%- include partials/index-metaheaders.ejs %> <%- include partials/resources.ejs %>
   </head>
   <body>
     <%- include('partials/header', { selectedPage: 'Home' }) %>
 
-    <!-- section -->
-    <div class="section">
-      <!-- container -->
-      <div class="container">
-        <!-- row -->
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-title">
-              <h2 class="featured-articles-title">Featured articles</h2>
-            </div>
-          </div>
+    <div class="index-wrapper">
+      <h2 class="index-title">Featured articles</h2>
 
-          <!-- post -->
-          <% articles.filter(x => x.isFeatured).sort((a,b) => +moment(b.date, 'DD/MM/YYYY') - +moment(a.date, 'DD/MM/YYYY')).map((article) => { %>
-          <div class="col-md-6">
-            <div class="post post-thumb">
-              <a class="post-img" href="<%= article.url %>">
-                <picture>
-                  <source srcset="<%= article.coverImageUrl.replace('.jpg', '.webp') %>" type="image/webp" />
-                  <source srcset="<%= article.coverImageUrl %>" type="image/jpeg" />
-                  <img loading="lazy" src="<%= article.coverImageUrl %>" alt="Article Cover Photo" />
-                </picture>
+      <div class="featured-articles">
+        <% articles.filter(x => x.isFeatured).sort((a,b) => +moment(b.date, 'DD/MM/YYYY') - +moment(a.date, 'DD/MM/YYYY')).map((article) => { %>
+        <div class="featured-article post post-thumb">
+          <a class="post-img" href="<%= article.url %>">
+            <picture>
+              <source srcset="<%= article.coverImageUrl.replace('.jpg', '.webp') %>" type="image/webp" />
+              <source srcset="<%= article.coverImageUrl %>" type="image/jpeg" />
+              <img loading="lazy" src="<%= article.coverImageUrl %>" alt="Article Cover Photo" />
+            </picture>
+          </a>
+          <div class="post-body">
+            <div class="post-meta">
+              <a class="post-category cat-2" style="background-color: <%= article.color %>;" href="#"><%= article.type %></a>
+              <span class="post-date"><%= moment(article.date, 'DD/MM/YYYY').format('MMMM DD, YYYY') %></span>
+            </div>
+            <h3 class="post-title">
+              <a href="<%= article.url %>">
+                <%= article.title %>
               </a>
-              <div class="post-body">
-                <div class="post-meta">
-                  <a class="post-category cat-2" style="background-color: <%= article.color %>;" href="#"><%= article.type %></a>
-                  <span class="post-date"><%= moment(article.date, 'DD/MM/YYYY').format('MMMM DD, YYYY') %></span>
-                </div>
-                <h3 class="post-title">
-                  <a href="<%= article.url %>">
-                    <%= article.title %>
-                  </a>
-                </h3>
-              </div>
-            </div>
+            </h3>
           </div>
-          <% }) %>
         </div>
-        <!-- /row -->
-
-        <!-- row -->
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-title">
-              <h2>Recent</h2>
-            </div>
-          </div>
-
-          <!-- post -->
-          <% articles.sort((a,b) => +moment(b.date, 'DD/MM/YYYY') - +moment(a.date, 'DD/MM/YYYY')).map((article, i) => { %> <% if(i % 3 == 0) { %>
-          <div class="row">
-            <% } %>
-            <div class="col-md-4">
-              <div class="post">
-                <a class="post-img" href="<%= article.url %>">
-                  <picture>
-                    <source srcset="<%= article.coverImageUrl.replace('.jpg', '.webp') %>" type="image/webp" />
-                    <source srcset="<%= article.coverImageUrl %>" type="image/jpeg" />
-                    <img loading="lazy" src="<%= article.coverImageUrl %>" alt="Article Cover Photo" />
-                  </picture>
-                </a>
-                <div class="post-body">
-                  <div class="post-meta">
-                    <a class="post-category" style="background-color: <%= article.color %>;" href="#"><%= article.type %></a>
-                    <span class="post-date"><%= moment(article.date, 'DD/MM/YYYY').format('MMMM DD, YYYY') %></span>
-                  </div>
-                  <h3 class="post-title">
-                    <a href="<%= article.url %>" style="line-height: 23px;">
-                      <%= article.title %>
-                    </a>
-                  </h3>
-                </div>
-              </div>
-            </div>
-            <% if(i % 3 == 2) { %>
-          </div>
-          <% } %> <% }) %>
-        </div>
-        <!-- /row -->
+        <% }) %>
       </div>
-      <!-- /container -->
-    </div>
-    <!-- /section -->
 
-    <%- include('partials/footer', { dataHref: `https://www.rntricks.com/`, href:
-    `https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.rntricks.com%2F&amp;src=sdkpreparse`, type: 'index' }) %>
+      <h2 class="index-title">Recent</h2>
+
+      <div class="recent-articles">
+        <% articles.sort((a,b) => +moment(b.date, 'DD/MM/YYYY') - +moment(a.date, 'DD/MM/YYYY')).map((article, i) => { %>
+        <div class="post recent-article">
+          <a class="post-img" href="<%= article.url %>">
+            <picture>
+              <source srcset="<%= article.coverImageUrl.replace('.jpg', '.webp') %>" type="image/webp" />
+              <source srcset="<%= article.coverImageUrl %>" type="image/jpeg" />
+              <img loading="lazy" src="<%= article.coverImageUrl %>" alt="Article Cover Photo" />
+            </picture>
+          </a>
+          <div class="post-body">
+            <div class="post-meta">
+              <a class="post-category" style="background-color: <%= article.color %>;" href="#"><%= article.type %></a>
+              <span class="post-date"><%= moment(article.date, 'DD/MM/YYYY').format('MMMM DD, YYYY') %></span>
+            </div>
+            <h3 class="post-title">
+              <a href="<%= article.url %>" style="line-height: 23px;">
+                <%= article.title %>
+              </a>
+            </h3>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+      <%- include('partials/footer', { dataHref: `https://www.rntricks.com/`, href:
+      `https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.rntricks.com%2F&amp;src=sdkpreparse`, type: 'index' }) %>
+    </div>
   </body>
 </html>

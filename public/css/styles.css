@@ -180,6 +180,8 @@ textarea.input {
   background-color: #fff;
   -webkit-box-shadow: 0px -1px 0px 0px #eceef2 inset;
   box-shadow: 0px -1px 0px 0px #eceef2 inset;
+  display: flex;
+  justify-content: center;
 }
 #nav-fixed.slide-down {
   -webkit-animation: slide-down 0.3s;
@@ -238,9 +240,10 @@ textarea.input {
 	logo
 \*----------------------------*/
 .nav-logo {
-  float: left;
   height: 70px;
-  padding-left: 8px;
+  margin-left: -4px;
+  width: 228px;
+  margin-right: 8px;
 }
 
 .nav-logo .logo img {
@@ -249,14 +252,13 @@ textarea.input {
 /*----------------------------*\
 	menu
 \*----------------------------*/
-.nav-menu {
-  margin-left: 20px;
-}
 .nav-menu li {
   display: inline-block;
   float: left;
 }
+
 .nav-menu li a {
+  display: inline-block;
   position: relative;
   padding: 25px 20px;
   -webkit-box-shadow: -1px 0px 0px 0px #eceef2 inset;
@@ -265,7 +267,7 @@ textarea.input {
   transition: 0.2s color;
   text-transform: uppercase;
   position: relative;
-  padding: 25px 20px;
+  padding: 25px 1vw;
   font-family: 'Roboto';
   font-weight: 500;
 }
@@ -320,19 +322,14 @@ textarea.input {
 	search
 \*----------------------------*/
 .nav-btns {
-  float: right;
   height: 70px;
-  width: 110px;
-  padding: 0 20px;
+  padding: 0 8px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
-.nav-btns > button {
-  padding: 25px 25px;
-  border: none;
-  line-height: 20px;
-  background: transparent;
+.nav-btns a {
+  margin-left: 32px;
 }
 .nav-btns .search-form {
   position: absolute;
@@ -382,7 +379,7 @@ textarea.input {
 	post
 \*----------------------------*/
 .post {
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 .post .post-img {
   display: block;
@@ -397,8 +394,7 @@ textarea.input {
   width: 100%;
 }
 .post .post-meta {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin: 10px 0;
 }
 .post-meta .post-category {
   font-size: 13px;
@@ -406,7 +402,7 @@ textarea.input {
   padding: 3px 10px;
   font-weight: 600;
   border-radius: 2px;
-  margin-right: 15px;
+  margin-right: 10px;
   color: #fff;
   background-color: #212631;
   -webkit-transition: 0.2s opacity;
@@ -463,7 +459,7 @@ textarea.input {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 4px;
   top: 0;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(33, 38, 49, 0.3)), to(transparent));
   background: linear-gradient(to top, rgba(33, 38, 49, 0.3) 0%, transparent 100%);
@@ -567,6 +563,44 @@ h3,
 h4,
 code {
   max-width: 100%;
+}
+
+.index-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 1200px;
+  max-width: calc(100vw - 120px);
+}
+
+h2.index-title {
+  text-transform: capitalize;
+  margin-bottom: 25px;
+}
+
+.featured-articles,
+.recent-articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.featured-article {
+  width: calc(50% - 30px);
+  height: calc(50% - 80px);
+}
+
+.recent-article {
+  width: calc(33% - 28px);
+  height: calc(33% - 26px);
+}
+
+.featured-articles-title {
+  margin-top: 0;
+}
+
+.article h2 {
+  text-transform: capitalize;
 }
 
 .article {
@@ -763,12 +797,6 @@ pre {
   max-width: 100%;
 }
 
-@media (max-width: 768px) {
-  pre {
-    font-size: 14px;
-  }
-}
-
 .article-type {
   font-size: 13px;
   text-transform: uppercase;
@@ -803,26 +831,6 @@ pre {
   word-break: unset;
 }
 
-.featured-articles-title {
-  margin-top: 0;
-}
-
-@media (max-width: 768px) {
-  .featured-articles-title {
-    margin-top: -20px;
-  }
-}
-
-.article h2 {
-  text-transform: capitalize;
-}
-
-@media (max-width: 768px) {
-  .brand-text {
-    margin-right: -30px;
-  }
-}
-
 .container {
   padding: 0;
 }
@@ -830,16 +838,44 @@ pre {
 .top-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-@media (max-width: 768px) {
-  .top-container {
-    display: block;
-    padding-right: 8px;
-  }
+  justify-content: space-between;
+  width: 1200px;
+  max-width: calc(100vw - 120px);
 }
 
 .fa {
   font-size: 16px;
+}
+
+.left-container {
+  display: flex;
+}
+
+@media (max-width: 700px) {
+  .brand-text {
+    margin-right: -30px;
+  }
+  .featured-articles-title {
+    margin-top: -20px;
+  }
+  pre {
+    font-size: 14px;
+  }
+  .top-container,
+  .index-wrapper {
+    max-width: calc(100vw - 30px);
+  }
+  .featured-article {
+    width: 100%;
+    height: auto;
+  }
+
+  .recent-article {
+    width: 100%;
+    height: auto;
+  }
+
+  h2.index-title {
+    font-size: 28px;
+  }
 }
