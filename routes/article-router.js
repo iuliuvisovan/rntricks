@@ -5,7 +5,13 @@ const moment = require('moment');
 const { getArticleByUrl, mapBlockToHtml } = require('./util');
 
 router.get('/*', (req, res, next) => {
-  const requestedUrl = req.baseUrl + req.path;
+  let requestedUrl = req.baseUrl + req.path;
+
+  let isAmp = false;
+  if (requestedUrl.includes('/amp')) {
+    isAmp = true;
+    requestedUrl = requestedUrl.replace('/amp', '');
+  }
 
   const article = getArticleByUrl(requestedUrl);
 
@@ -16,7 +22,7 @@ router.get('/*', (req, res, next) => {
 
       res.sendFile(resolvedFilePath);
     } else {
-      res.render('article', { article: article, mapBlockToHtml, moment });
+      res.render('article', { article: article, mapBlockToHtml, moment, isAmp });
     }
   } else {
     return res.redirect('/');
