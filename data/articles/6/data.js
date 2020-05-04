@@ -18,7 +18,7 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `It was invented so JavaScript can manipulate the website DOM faster using <a href="https://reactjs.org/docs/faq-internals.html">the virtual DOM</a>, which uses
+      innerText: `<b>It was invented so JavaScript can manipulate the website DOM</b> faster using <a href="https://reactjs.org/docs/faq-internals.html">the virtual DOM</a>, which uses
       a smart diffing algorithm to only update the UI when needed, and doing so in batches, resulting in a more performant UI.`,
     },
     {
@@ -28,11 +28,11 @@ module.exports = {
     {
       type: 'p',
       innerText: `<a href="https://reactnative.dev/">React Native</a> is a mobile applications development framework
-      built on top of ReactJS, that allows you to build performant, native mobile applications by writing code that is very similar to pure React.`,
+      built on top of ReactJS, that allows you to <b>build performant, native mobile applications</b> by writing code that is very similar to pure React.`,
     },
     {
       type: 'p',
-      innerText: `When compiled, it turns the Javascript & JSX code into native iOS/Android app components (also, see <a href="https://microsoft.github.io/react-native-windows/">React Native for Windows
+      innerText: `When compiled, it turns the Javascript & JSX code into <b>native iOS/Android app components</b> (also, see <a href="https://microsoft.github.io/react-native-windows/">React Native for Windows
       and Mac</a> and <a href="https://docs.expo.io/versions/v33.0.0/introduction/running-in-the-browser/">Expo Web</a>).
       `,
     },
@@ -46,7 +46,7 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `Firstly, you cannot use React Native without also using React. Secondly, React Native is not a tool that can be used on the web (even if third party efforts <a href="https://docs.expo.io/versions/v33.0.0/introduction/running-in-the-browser/">do exist</a>) or in SSR.`,
+      innerText: `Firstly, you <b>cannot use React Native without also using React</b>. Secondly, React Native is not a tool that can be used on the web (even if third party efforts <a href="https://docs.expo.io/versions/v33.0.0/introduction/running-in-the-browser/">do exist</a>) or in SSR.`,
     },
   ],
 };
