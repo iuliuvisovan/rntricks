@@ -10,16 +10,20 @@ module.exports = {
 
     return currentArticle;
   },
-  mapBlockToHtml: ({ type, innerText, url, className, alt }, articleUrl) => {
+  mapBlockToHtml: ({ type, innerText, url, className, alt }, articleUrl, isAmp) => {
     `src="${articleUrl}/img/${url}"`;
 
     if (type == 'img') {
-      return `<picture>
-      <source srcset="${articleUrl}/img/${url.replace('.jpg', '.webp')}" type="image/webp" />
-      <source srcset="${articleUrl}/img/${url}" type="image/jpeg" />
-      <img src="${articleUrl}/img/${url}" ${alt ? 'alt' + `="${alt}"` : ''} />
-      </picture>
-      `;
+      if (!isAmp) {
+        return `<picture>
+        <source srcset="${articleUrl}/img/${url.replace('.jpg', '.webp')}" type="image/webp" />
+        <source srcset="${articleUrl}/img/${url}" type="image/jpeg" />
+        <img src="${articleUrl}/img/${url}" ${alt ? 'alt' + `="${alt}"` : ''} />
+        </picture>
+        `;
+      } else {
+        return `<div style="position: relative; width: 700px; height: 170px;"><amp-img class="contain" layout="fill" src="${articleUrl}/img/${url.replace('.jpg', '.webp')}" alt="${alt}"></amp-img></div>`;
+      }
     }
 
     const hrefOrSrc = url ? `href="${url}"` : '';

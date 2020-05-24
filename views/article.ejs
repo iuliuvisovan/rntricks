@@ -62,7 +62,7 @@
       </div>
 
       <div class="article-body">
-        <%- article.body.map(block => mapBlockToHtml(block, article.url)).join('') %>
+        <%- article.body.map(block => mapBlockToHtml(block, article.url, isAmp)).join('') %>
       </div>
     </div>
 
