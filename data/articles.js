@@ -13,6 +13,11 @@ const enhance = (article) => {
 
   const coverImageUrl = `${article.url}/img/cover.jpg`;
 
+  if (article.id > 10) {
+    // article.body = [];
+    article.body = article.body.sort((a, b) => a.innerText.length - b.innerText.length);
+  }
+
   article.coverImageUrl = fs.existsSync(path.resolve(`./data/articles/${article.id}/img/cover.jpg`)) ? coverImageUrl : '/img/default-cover.jpg';
   return article;
 };
@@ -45,7 +50,5 @@ const typeColors = {
   Answer: '#4bb92f',
 };
 
-module.exports = [...new Array(1000)]
-  .map(requireAndEnhance)
-  .filter((x) => x);
-  // .filter((x) => !(x || {}).hidden);
+module.exports = [...new Array(1000)].map(requireAndEnhance).filter((x) => x);
+// .filter((x) => !(x || {}).hidden);
