@@ -2,7 +2,7 @@ module.exports = {
   date: '22/08/2020',
   type: 'Tutorial',
   title: '7 Easy Steps To Localize Your React Native App',
-  ogUrl: 'https://ow.ly/',
+  ogUrl: 'https://bit.do/',
   hidden: true,
   subtitle: 'It\'s not a matter of "if", but "when". Let\'s see how.',
   body: [
