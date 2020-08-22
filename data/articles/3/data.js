@@ -8,7 +8,7 @@ module.exports = {
   body: [
     {
       type: 'p',
-      innerText: `<i>(this article is also available on Medium: <a href="https://medium.com/@iuliu/7-easy-steps-to-localize-your-react-native-app-6622658d1624">https://medium.com/@iuliu/7-easy-steps-to-localize-your-react-native-app-6622658d1624)</a></i>`,
+      innerText: `<i>(this article is also available on Medium: <a href="https://medium.com/@iuliu/7-easy-steps-to-localize-your-react-native-app-6622658d1624">https://medium.com/@iuliu/7-easy-steps-to-localize-your-react-native-app-6622658d1624</a>)</i>`,
     },
     {
       type: 'h2',
