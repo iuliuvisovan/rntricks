@@ -12,11 +12,11 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `It *is* true that any translation library that works for React will also do the trick for React Native. There's <a href="https://phrase.com/blog/posts/react-i18n-best-libraries/">about 5 or 6 main options that you could choose from</a>.`,
+      innerText: `It <b>is</b> true that any translation library that works for React will also do the trick for React Native. There's <a href="https://phrase.com/blog/posts/react-i18n-best-libraries/">about 5 or 6 main options that you could choose from</a>, but after counting up the pros and cons of each one, we decided to go with <a href="https://www.i18next.com/">i18next</a>.`,
     },
     {
       type: 'p',
-      innerText: `But after counting up the pros and cons of each one, we decided to go with <a href="https://www.i18next.com/">i18next</a>. It's a library that offers a quick "getting started" routine, as well as quite a few  plug-n-play features which you can opt in for later.`,
+      innerText: `<a href="https://www.i18next.com/">i18next</a> is a free library that offers a quick "getting started" routine, as well as some nice plug-n-play features that you might find useful and opt for later.`,
     },
     {
       type: 'p',
@@ -36,7 +36,7 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `Create a file and put it in a folder that works best for you (e.g. <code>/translations/en.tsx</code>), and where you will later add translation files for all your supported languages. It should contain something like:`,
+      innerText: `Create a file and put it in a folder that works best for you (e.g. <code>/translations/en.tsx</code>), and where you will later add translation files for all your supported languages. It should, for now, look something like this:`,
     },
     {
       type: 'pre',
@@ -50,7 +50,7 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `Put this in your root component:`,
+      innerText: `Add this code somewhere at the top of your root component:`,
     },
     {
       type: 'pre',
@@ -61,7 +61,9 @@ module.exports = {
   
   import en from './translation/en';
 
-  i18n.use(initReactI18next).init({
+  i18n
+  .use(initReactI18next)
+  .init({
     lng: 'en',
     fallbackLng: 'en',
     debug: true,
@@ -78,21 +80,22 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `The initialization is pretty straightforward, but can take a ton of configuration options based on your needs. <a href="https://www.i18next.com/overview/configuration-options">See all of them here.</a>`,
+      innerText: `The initialization is pretty straightforward, but can take in quite a few configuration options based on your needs. <a href="https://www.i18next.com/overview/configuration-options">You can see all of them here.</a>`,
     },
     {
       type: 'p',
-      innerText: `Right now, we could just go and try it out: `,
+      innerText: `But right now, we can already go ahead and try it out: `,
     },
     {
       type: 'pre',
       innerText: `
-    import <b>i18next</b> from 'i18next';
-    render() {
-      return (
-        &lt;Text><b>i18next.t</b>('Hello world!')&lt;/Text>,
-      )
-    }`,
+  import <b>i18next</b> from 'i18next';
+  
+  render() {
+    return (
+      &lt;Text>{<b>i18next.t</b>('Hello world!')}&lt;/Text>
+    )
+  }`,
     },
     {
       type: 'h2',
@@ -100,7 +103,7 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `This is not a mandatory step, but will save a lot of time during development.`,
+      innerText: `This will save a lot of time during development, as it removes the need to prefix the <code>t</code> function with <code>i18next.</code> every time.`,
     },
     {
       type: 'p',
@@ -110,28 +113,29 @@ module.exports = {
       type: 'pre',
       innerText: `
   import i18next from 'i18next';
+
   <b>global.T</b> = i18next.t;`,
     },
     {
       type: 'p',
-      innerText: `Now, instead of <code>import</code>ing <code>18next</code> every time, you can just call <code><b>T</b></code>:`,
+      innerText: `Now, instead of importing <code>18next</code> every time, you can just call <code><b>T</b></code>:`,
     },
     {
       type: 'pre',
       innerText: `
     render() {
       return (
-        &lt;Text><b>T</b>('Hello world!')&lt;/Text>
+        &lt;Text>{<b>T</b>('Hello world!')}&lt;/Text>
       )
     }`,
     },
     {
       type: 'p',
-      innerText: `Shorter, cleaner, and quicker to write.`,
+      innerText: `Shorter, cleaner and quicker to write.`,
     },
     {
       type: 'p',
-      innerText: `Feel free to use <code>t</code> instead of <code>T</code>. We prefer it for visibility purposes.`,
+      innerText: `Feel free to use <code>t</code> instead of <code>T</code>. We prefer it for visibility.`,
     },
     {
       type: 'h2',
@@ -139,7 +143,7 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `Again, not mandatory, but with some TS magic and very little code, we can achieve static checking for our keys when calling <code>T</code>. Modify your previous code as follows:`,
+      innerText: `This is not mandatory but with some TS magic and very little code, we can achieve static checking for our keys when calling <code>T</code>. Modify your previous code as follows:`,
     },
     {
       type: 'pre',
@@ -160,6 +164,10 @@ module.exports = {
     },
     {
       type: 'p',
+      innerText: `We are importing the already existing translation file that has all our english keys, and using them to statically analize and validate our T calls. Sweet!`,
+    },
+    {
+      type: 'p',
       innerText: `Now, whenever we try to translate using a non-existing key, we get a static compiler warning: `,
     },
     {
@@ -173,7 +181,7 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `So after we've wrapped code like <code>T('Some key')</code>, we need to somehow get our key into the translation file. `,
+      innerText: `So, after we've wrapped our labels like <code>T('Some key')</code>, we need to somehow get our key (<code>'Some key'</code>) into the translation file. `,
     },
     {
       type: 'p',
@@ -181,11 +189,11 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `Here's where one of <b>i18next</b>'s many features come into play. The tool that we will be using to do this for us is called <b>locize</b> (part of i18next). Read more about it and/or register for it <a href="https://locize.com/how-it-works.html">here</a>.`,
+      innerText: `Here's where one of <b>i18next</b>'s many features comes into play. The tool that we will be using is called <b>locize</b> (read more about it and/or register for it <a href="https://locize.com/how-it-works.html">here</a>).`,
     },
     {
       type: 'p',
-      innerText: `What it's gonna do for us: whenever we call <code>i18next.t</code> with a certain key, the library will automatically add it to a json that we can easily export and put into our project. Sweet!`,
+      innerText: `What it's gonna do for us: whenever we call <code>i18next.t</code> with a certain key, the library will automatically check if it exists, and if not, add it to a json that we can easily export and then put into our project. Nice!`,
     },
     {
       type: 'p',
@@ -230,7 +238,7 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `Now if you navigate to a screen that uses the <code>T</code> function, your key will automatically be added to locize:`,
+      innerText: `Now if you navigate to a screen that uses the <code>T</code> function, your key will automatically be added to <b>locize</b>:`,
     },
     {
       type: 'img',
@@ -239,7 +247,7 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `And whenever you feel like it, export it to a JSON using the "...More" context menu in the top right. The JSON will look like this:`,
+      innerText: `And whenever you feel like it, export it to a <code>JSON</code> using the "...More" context menu in the top right. The <code>JSON</code> will look like this:`,
     },
     {
       type: 'pre',
@@ -255,8 +263,13 @@ module.exports = {
       innerText: `7. Changing the language`,
     },
     {
+      type: 'img',
+      url: `language.png`,
+      alt: `Language picker`,
+    },
+    {
       type: 'p',
-      innerText: `Wrap the component from which you want to change the language with the <code>withTranslation</code> HOC:`,
+      innerText: `Changing the language is simply telling <b>i18next</b> to "use another resource file" (e.g. fr.tsx). To do this, we need to wrap the component from which we want to change the language with the <code>withTranslation</code> HOC:`,
     },
     {
       type: 'pre',
@@ -274,7 +287,11 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `<code>languageCode</code> being one of the provided keys inside of<br/> <code>resources</code> in the i18next initialization object.`,
+      innerText: `inside your component.`,
+    },
+    {
+      type: 'p',
+      innerText: `Here, <code>languageCode</code> is one of the provided keys inside of<br/> <code>resources</code> in the i18next initialization object.`,
     },
     {
       type: 'h2',
@@ -282,7 +299,7 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `There are still nice things you could do, such as putting your <code>T</code> inside of a custom <code>Text</code> component that you would use instead of the default one, to get you writing even less <code>T</code>s, but other than that, these steps will get you to a point in which you can get to a fully translation-ready app in as little as a day. And then it's just a matter of sending the files to the translators!`,
+      innerText: `There are still some nice things you could do, such as putting your <code>T</code> inside of a custom <code>Text</code> component that you would use instead of the default one, to get you writing even less <code>T</code>s, but other than that, these steps will get you to a point in which you can get to a fully translation-ready app in as little as a day. And then it's just a matter of sending the files to the translators!`,
     },
   ],
 };
