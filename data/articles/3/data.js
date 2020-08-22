@@ -1,5 +1,5 @@
 module.exports = {
-  date: '15/04/2020',
+  date: '22/08/2020',
   type: 'Tutorial',
   title: '7 Easy Steps To Localize Your React Native App',
   ogUrl: 'https://ow.ly/',
