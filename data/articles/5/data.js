@@ -93,7 +93,7 @@ module.exports = {
     },
     {
       type: 'h2',
-      innerText: `8. No Backwards Compatibility`,
+      innerText: `7. No Backwards Compatibility`,
     },
     {
       type: 'p',
