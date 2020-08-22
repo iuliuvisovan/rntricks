@@ -7,12 +7,16 @@ module.exports = {
   subtitle: 'It\'s not a matter of "if", but "when". Let\'s see how.',
   body: [
     {
+      type: 'p',
+      innerText: `<i>(this article is also available on Medium: <a href="https://medium.com/@iuliu/7-easy-steps-to-localize-your-react-native-app-6622658d1624">https://medium.com/@iuliu/7-easy-steps-to-localize-your-react-native-app-6622658d1624)</a></i>`,
+    },
+    {
       type: 'h2',
       innerText: `Which library should you choose?`,
     },
     {
       type: 'p',
-      innerText: `It <b>is</b> true that any translation library that works for React will also do the trick for React Native. There's <a href="https://phrase.com/blog/posts/react-i18n-best-libraries/">about 5 or 6 main options that you could choose from</a>, but after counting up the pros and cons of each one, we decided to go with <a href="https://www.i18next.com/">i18next</a>.`,
+      innerText: `It <b>is</b> true that any translation library that works for React will also do the trick for React Native. There are <a href="https://phrase.com/blog/posts/react-i18n-best-libraries/">about 5 or 6 main options that you could choose from</a>, but after counting up the pros and cons of each one, we decided to go with <a href="https://www.i18next.com/">i18next</a>.`,
     },
     {
       type: 'p',
@@ -36,7 +40,7 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `Create a file and put it in a folder that works best for you (e.g. <code>/translations/en.tsx</code>), and where you will later add translation files for all your supported languages. It should, for now, look something like this:`,
+      innerText: `Create a file and put it in a folder that works best for you (e.g. <code>/translations/en.tsx</code>), where you will later add translation files for all your supported languages. It should, for now, look something like this:`,
     },
     {
       type: 'pre',
@@ -135,7 +139,7 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `Feel free to use <code>t</code> instead of <code>T</code>. We prefer it for visibility.`,
+      innerText: `<i>Feel free to use <code>t</code> instead of <code>T</code>. We prefer it for visibility.</i>`,
     },
     {
       type: 'h2',
@@ -143,7 +147,7 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `This is not mandatory but with some TS magic and very little code, we can achieve static checking for our keys when calling <code>T</code>. Modify your previous code as follows:`,
+      innerText: `This is not mandatory, but with some TS magic and very little code, we can achieve static checking for our keys when calling <code>T</code>. Modify your previous code as follows:`,
     },
     {
       type: 'pre',
@@ -164,11 +168,11 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `We are importing the already existing translation file that has all our english keys, and using them to statically analize and validate our T calls. Sweet!`,
+      innerText: `We are importing the already existing translation file that has all our english keys, and using them to statically analyze and validate our T calls. Sweet!`,
     },
     {
       type: 'p',
-      innerText: `Now, whenever we try to translate using a non-existing key, we get a static compiler warning: `,
+      innerText: `Now, whenever we attempt to translate using a non-existing key, we get a static compiler warning: `,
     },
     {
       type: 'img',
