@@ -4,15 +4,23 @@ module.exports = {
   title: '7 Ways In Which React Native Is Better Than the Web',
   hidden: true,
   ogUrl: 'https://bit.do/',
-  subtitle: "It's all a 'what could've been' story now.",
+  subtitle: "Weird comparison, ain't it?",
   body: [
     {
       type: 'p',
-      innerText: `"It makes no sense to compare 2 technologies that are meant for 2 different things", you might say. But having spent almost 3 years writing React Native, and then once every few months occasionally coming back to the web, I couldn't help but notice how much less sense the web makes.`,
+      innerText: `"It makes no sense to compare 2 technologies that are meant for 2 different things, and whose initial designs are 20 years apart", you might say. But since their end products look & feel so similar, you'd expect that the way of achieving them is quite similar too, right?`,
+    },
+    {
+      type: 'p',
+      innerText: `Wrong. Having spent all of my last few years in the React Native world and occasionally coming back to the web, I cant't help but notice how much less sense the web makes.`,
     },
     {
       type: 'p',
       innerText: `One can only imagine how good the web could've been, have it not been mediocrily designed initially, and then patched over and over throughout the years.`,
+    },
+    {
+      type: 'p',
+      innerText: `So, considering React Native's ~20yrs of learning from web's (and others') mistakes, let's see what advantages it brings to the table.`,
     },
     {
       type: 'h2',
@@ -20,15 +28,19 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `You could blame it on HTML's age, or the fact that the web gains more from meaning to its markup, but the crux of the matter is that the plethora of elements that are available and used all over the web contribute greatly to why HTML and web in general became such a unstandardized, non-consistent mess.`,
+      innerText: `You could blame it on HTML's age, or the fact that the web has some gains from having meaning to its markup, but the crux of the matter is that the plethora of elements that are available and used all over the web contribute greatly to why HTML and web in general became such a unstandardized, non-consistent mess.`,
     },
     {
       type: 'p',
-      innerText: `Why do you need p, span, h1, h2, h3, h4, h5, h6, u, a, i and 15 other options to achieve the same thing? - You don't. And React Native's <code>Text</code> and <code>View</code> components prove just that.`,
+      innerText: `Even though there are close to 100 tags in HTML5, you usually end up using just a few, 99% of the time. Not even that, but the same layout is achievable with any combination of them and the same behaviour is achievable with any combination of them. `,
     },
     {
       type: 'p',
-      innerText: `Your code is cleaner. Your styles are more predictable. The language spoken through markup is always the same. And at the end of the day, you get a much, much more consistent, much more standardized and maintainable codebase.`,
+      innerText: `The eventual issue of "lost semantics" is non-existent, as "speaking a language" is completely useless when the language you speak is different than 99% of the others (which is partly why ARIA was invented). Facebook fully embraced this concept and demonstrates it perfectly, as e.g. all of their text inputs are just <code>spans</code> or <code>divs</code> with <code>role="textbox"</code>.`,
+    },
+    {
+      type: 'p',
+      innerText: `React Native's <code>Text</code> and <code>View</code> components prove that, too. Your code is cleaner. Your styles are more predictable. The language spoken through markup is always the same. And at the end of the day, you get a much, much more consistent, much more standardized and maintainable codebase.`,
     },
     {
       type: 'h2',
@@ -36,15 +48,15 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `You might hate this at first, because no cascading also means more style declarations. But this becomes such an important and obvious gain as the project grows, that you'll hate ever having to deal with CSS again.`,
+      innerText: `You might hate this at first when writing React Native, because no cascading also means more style declarations. But this becomes such an important and obvious gain as the project grows, that you'll hate ever having to deal with CSS again.`,
     },
     {
       type: 'p',
-      innerText: `Your styles become so much more straightforward, and your UIs become so much more predictable, that building/fixing them is just a joy.`,
+      innerText: `Your styles become so much more straightforward, and your UIs become so much more predictable, that building/fixing them is just so much easier.`,
     },
     {
       type: 'p',
-      innerText: `Being able to just plug-n-play any library that you find on the web and be 100% sure that it isn't influenced by any of your styles and just works - really nice. The fact that your code doesn't <b>rely</b> on the order of its style declarations - really nice. The fact that your code never gets to a point where the only way out of nasty bugs is filling your code with <b>!important</b>s - incredibly nice.`,
+      innerText: `Being able to just plug-n-play any library that you find on the web and be 100% sure that it isn't influenced by any of your styles and just works: nice. The fact that your code doesn't <b>rely</b> on the order of its style declarations: really nice. The fact that your code never gets to a point where the only way out of nasty bugs is filling your code with <b>!important</b>s - incredibly nice.`,
     },
     {
       type: 'p',
@@ -56,7 +68,7 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `Well what can I say. If the web were to be invented today, it would most probably also have flex as the default and possibly only option. But it isn't, so it doesn't.`,
+      innerText: `Well what can I say. If the web were to be invented today, it would most probably also have this. But it is not, so it does not. It has three arbitrary default display values based on which tag you use (I'm still not sure if <code>img</code> is <code>block</code> or <code>inline-block</code>), and these three display values may support or may not support some arbitrary CSS property (I'm looking at you, <code>span { margin-top: 5px }</code>).`,
     },
     {
       type: 'h2',
@@ -73,7 +85,7 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `Any UI component that you can think of is available and ready to be used. And they work well and look good. Whereas on the web, it's more like as if you've ordered a cake and received the ingredients to make it yourself.`,
+      innerText: `Any UI component that you can think of is available and ready to be used. And they work well and look good. Whereas on the web, I can't think of a time that an external component/library was not affected in *some* way by the already existing styles/logic.`,
     },
     {
       type: 'h2',
@@ -89,11 +101,11 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `Service Workers are web's attempt at achieving a similar behaviour. They're not far from there, but their steep learning curve and cumbersome setup means very little apps actually use it and have it gotten right. In React Native, this is more or less a default. And it's fast. And easy.`,
+      innerText: `Service Workers are web's attempt at achieving a similar behaviour. However, their lack of global availability, steep learning curve and cumbersome setup means very little apps actually use it and have it gotten right. In React Native, this is more or less a default. And it's fast. And easy.`,
     },
     {
       type: 'h2',
-      innerText: `7. No Backwards Compatibility`,
+      innerText: `7. No Weird Backwards Compatibility Lingers`,
     },
     {
       type: 'p',
@@ -105,7 +117,7 @@ module.exports = {
     },
     {
       type: 'p',
-      innerText: `Every feature that was added on the web in the recent years is great. But they could've been much, much better if it weren't for the obligation of supporting every single weird/ancient JS/HTML version ever implemented by a website. Weird names, weird rules, weird hacks, or even just the inability to ship something altogether, they're all the results of having to develop a system with a legacy of over 20 years.`,
+      innerText: `Almost every feature that was added on the web in the recent years is great, and many of them are real breaths of much-needed fresh air. But weird constraints, names, rules, experiments, patches - they have all contributed to the web we know and use (and who many of us still love) today. The web today has a desire of being modern, sleek and fast, but also has an obligation of tens of years of heritage to perpetuate.`,
     },
   ],
 };
