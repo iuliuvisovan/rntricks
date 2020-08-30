@@ -8,6 +8,10 @@ module.exports = {
   body: [
     {
       type: 'p',
+      innerText: `<i>(this article is also available on Medium: <a href="https://medium.com/@iuliu/7-ways-in-which-react-native-is-better-than-the-web-61ac784df9c">https://medium.com/@iuliu/7-ways-in-which-react-native-is-better-than-the-web-61ac784df9c</a>)</i>`,
+    },
+    {
+      type: 'p',
       innerText: `"It makes no sense to compare 2 technologies that are meant for 2 different things, and whose initial designs are 20 years apart", you might say. But since their end products look & feel so similar, you'd expect that the way of achieving them is quite similar too, right?`,
     },
     {
