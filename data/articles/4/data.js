@@ -1,5 +1,5 @@
 module.exports = {
-  date: '14/03/2020',
+  date: '14/08/2020',
   type: 'Tips & Tricks',
   title: 'Use This Fast Refresh Trick To Quickly Debug Your React Native App',
   hidden: true,

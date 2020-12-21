@@ -1,5 +1,5 @@
 module.exports = {
-  date: '13/03/2020',
+  date: '13/09/2020',
   type: 'Answer',
   title: 'Maximum update depth exceeded error - how to fix',
   subtitle: '',
